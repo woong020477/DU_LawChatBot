@@ -39,3 +39,17 @@ function openSettings() {
     if (e.key === 'Enter') sendMessage();
   });
   
+  // 좌측 메뉴 토글 기능
+  const menuToggleBtn = document.getElementById('menu-toggle');
+  const sidebar = document.getElementById('menubar');
+  
+  menuToggleBtn.addEventListener('click', () => {
+    sidebar.classList.toggle('visible');
+  });  
+
+  // X축 해상도 850이하일 경우 모바일 사이즈로 변경
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 850) {
+      sidebar.classList.remove('visible');
+    }
+  });

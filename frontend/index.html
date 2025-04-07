@@ -8,13 +8,16 @@
 <body class="light">
   <div class="container">
     <!-- 메뉴 영역 -->
-    <aside class="sidebar">
-      <button onclick="openSettings()">Setting</button>
-      <a href="https://github.com/woong020477/DU_LawChatBot" target="_blank">Documentation</a>
-      <a href="https://github.com/woong020477/DU_LawChatBot" target="_blank">Help</a>
+    <aside id="menubar" class="menubar">
+      <button id="menu-toggle" class="menu-toggle">☰</button>
+      <!-- 메뉴 토글 버튼 -->
+      <div id="menu-items" class="menu-items">
+        <button onclick="openSettings()">Setting</button>
+        <button onclick="location.href='https://github.com/woong020477/DU_LawChatBot'" target="_blank">Documentation</button>
+        <button onclick="location.href='https://github.com/woong020477/DU_LawChatBot'" target="_blank">Help</button>
+      </div>
     </aside>
-
-    <!-- 가운데 챗 영역 -->
+    <!-- 가운데 채팅 영역 -->
     <main class="chat-area">
       <div id="chat-log" class="chat-log"></div>
       <div class="input-area">
