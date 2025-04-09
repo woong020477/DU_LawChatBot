@@ -201,7 +201,7 @@ body.dark .right-panel {
 }
 
 /* 데스크탑 전용: 메뉴 확장 시 채팅 영역 밀기 */
-@media (min-width: 851px) {
+@media (min-width: 901px) {
   .menubar.visible ~ .chat-area {
     margin-left: 270px;
   }
@@ -212,7 +212,7 @@ body.dark .right-panel {
 }
 
 /* 모바일 레이아웃 */
-@media (max-width: 850px) {
+@media (max-width: 900px) {
   .container {
     flex-direction: column;
     height: 100vh;
