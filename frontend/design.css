@@ -162,6 +162,7 @@ body.dark {
   background: #f0f0f0;
   padding: 24px;
   font-size: 18px;
+  transition: transform 0.3s ease;
 }
 body.dark .right-panel {
   background: #2e2e2e;
