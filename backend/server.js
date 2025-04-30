@@ -37,7 +37,7 @@ app.post('/sendMessage', async (req, res) => {
     const { userMessage } = req.body;
   
     try {
-      console.log('Received message from client:', userMessage);  // 클라이언트 메시지 출력
+      console.log('클라이언트로 부터 전달받은 메시지 : ', userMessage);  // 클라이언트 메시지 출력
   
       // OpenAI API 요청 보내기
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
