@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 41007398,
+    "dataType": "판결문",
+    "caseNm": "건축법위반피고사건",
+    "caseTitle": "부산지방법원 1986. 7. 11. 선고 85노1863 제1형사부판결 : 상고",
+    "courtType": "판례(하급심)",
+    "courtNm": "부산지방법원",
+    "judmnAdjuDe": "1986-07-11",
+    "caseNoID": "85노1863",
+    "caseNo": "85노1863"
+  },
+  "jdgmn": "건축주의 변경이 있는 경우 전 건축주에 의하여 선정된 공사감리자의 지위의 존속여부",
+  "jdgmnInfo": [
+    {
+      "question": "건축주의 변경이 있더라도 이미 선정된 공사감리자의 지위는 유지되는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "일단 선정된 공사감리자는 그 선정이 취소되거나 변경되기 전에는 그후 건축주의 변경에도 불구하고 여전히 그 지위를 유지한다.",
+      "summ_pass": "건축주의 변경이 있더라도 이미 선정된 공사감리자의 지위는 유지된다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "공사감리자"
+    },
+    {
+      "id": 2,
+      "keyword": "건축주"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "건축법(법률 제3251호) 제6조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "형사B(일반형)",
+    "instance_name": "건축법위반"
+  }
+}

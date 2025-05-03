@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 55962869,
+    "dataType": "판결문",
+    "caseNm": "집행판결청구사건",
+    "caseTitle": "서울민사지법 1984. 9. 12. 선고 84가합344, 제14부판결 : 확정",
+    "courtType": "판례(하급심)",
+    "courtNm": "서울민사지법",
+    "judmnAdjuDe": "1984-09-12",
+    "caseNoID": "84가합344",
+    "caseNo": "84가합344"
+  },
+  "jdgmn": "미합중국과 대한민국간의 외국판결의 효력에 관한 상호보증 유무(적극)",
+  "jdgmnInfo": [
+    {
+      "question": "미합중국과 대한민국간의 외국판결의 효력에 관한 상호보증 있는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "미연방대심원〔Hilton v Guyot 159 US 113(1895)사건] 및 리스테이트먼트 제98조 〔Restatement of the Law Second Conflict of Laws(1971) §98〕는 대체로 우리나라민사소송법 제203조,제476조,제477조와 동일한 취지이므로 미합중국에서 우리나라 판결이 집행되기 위한 조건은 우리나라와 같다고 보면, 미합중국과 우리나라 사이의 외국판결의 효력문제는 상호보증이 있다고 할 것이다.",
+      "summ_pass": "우리나라민사소송법 제203조,제476조,제477조와 동일한 취지이므로 미합중국에서 우리나라 판결이 집행되기 위한 조건은 우리나라와 같다고 보면, 미합중국과 우리나라 사이의 외국판결의 효력문제는 상호보증이 있다고 할 것이다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "판결의 효력"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "민사소송법 제203조, 제476조, 제477조, 리스테이트먼트 제98조 〔Restatement of the Law Second Conflict of Laws(1971) §98〕",
+    "reference_court_case": "Hilton V Guyot 159 US 113(1895)"
+  },
+  "Class_info": {
+    "class_name": "민사",
+    "instance_name": "집행판결청구사건"
+  }
+}

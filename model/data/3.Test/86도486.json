@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 41007401,
+    "dataType": "판결문",
+    "caseNm": "관세법위반",
+    "caseTitle": "대법원 1986. 7. 8. 선고 86도486 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1986-07-08",
+    "caseNoID": "86도486",
+    "caseNo": "86도486"
+  },
+  "jdgmn": "관세법상의 범칙자가 수인인 경우의 추징방법",
+  "jdgmnInfo": [
+    {
+      "question": "관세법상의 범칙자가 수인인 경우 각 범칙자에 대해 그 가액전부의 추징을 명해야 하는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "관세법상의 몰수, 추징은 관세법위반에 대한 제재이므로 범칙자가 여러 사람인 경우, 그 추징은 각 범칙자에 대하여 그 가액전부의 추징을 명해야 한다.",
+      "summ_pass": "관세법상의 범칙자가 수인인 경우 각 범칙자에 대해 그 가액전부의 추징을 명해야 한다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "관세법위반"
+    },
+    {
+      "id": 2,
+      "keyword": "범칙자"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "관세법 제198조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "형사B(일반형)",
+    "instance_name": "관세법위반"
+  }
+}
