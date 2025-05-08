@@ -1,0 +1,2 @@
+# 백엔드 폴더에 API KEY 파일 추적금지
+backend/.env
