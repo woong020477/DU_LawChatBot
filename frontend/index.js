@@ -3,6 +3,16 @@ document.addEventListener('DOMContentLoaded', () => {
   const sendButton = document.querySelector('#send-button');
   const messageInput = document.querySelector('#message-input');
 
+  // ☰ 메뉴 토글 기능 추가
+  const menuToggle = document.getElementById('menu-toggle');
+  const menubar = document.getElementById('menubar');
+
+  if (menuToggle && menubar) {
+    menuToggle.addEventListener('click', () => {
+      menubar.classList.toggle('visible');
+    });
+  }
+
   // 요소가 없으면 에러 처리
   if (!chatLog || !sendButton || !messageInput) {
     console.error("필요한 HTML 요소가 없습니다.");
@@ -80,4 +90,35 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
   });
+
+  // 설정 열기
+  function openSettings() {
+    const overlay = document.getElementById('settings-overlay');
+    if (overlay) {
+      overlay.classList.remove('hidden');
+    }
+  }
+
+  // 설정 닫기
+  function closeSettings() {
+    const overlay = document.getElementById('settings-overlay');
+    if (overlay) {
+      overlay.classList.add('hidden');
+    }
+  }
+
+  // 라이트 / 다크 모드 설정
+  function setMode(mode) {
+    if (mode === 'light') {
+      document.body.classList.remove('dark');
+      document.body.classList.add('light');
+    } else if (mode === 'dark') {
+      document.body.classList.remove('light');
+      document.body.classList.add('dark');
+    }
+  }
+  
+  window.openSettings = openSettings;
+  window.closeSettings = closeSettings;
+  window.setMode = setMode;
 });
