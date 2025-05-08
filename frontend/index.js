@@ -69,15 +69,15 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-    // Enter 키를 눌렀을 때 메시지 전송
-    messageInput.addEventListener('keydown', (event) => {
-      if (event.key === 'Enter') {
-        event.preventDefault(); // 기본 Enter 동작 방지 (줄바꿈 방지)
-        const message = messageInput.value;  // 사용자 입력값
-        if (message) {
-          sendMessage();  // 메시지 전송
-          messageInput.value = '';  // 입력 필드 비우기
-        }
+  // Enter 키를 눌렀을 때 메시지 전송
+  messageInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault(); // 기본 Enter 동작 방지 (줄바꿈 방지)
+      const message = messageInput.value;  // 사용자 입력값
+      if (message) {
+        sendMessage();  // 메시지 전송
+        messageInput.value = '';  // 입력 필드 비우기
       }
-    });
+    }
+  });
 });
