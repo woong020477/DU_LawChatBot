@@ -2,11 +2,11 @@ import express from 'express';
 import fetch from 'node-fetch';
 import bodyParser from 'body-parser';
 import cors from 'cors';
-import dotenv from 'dotenv';
+import dotenv from 'dotenv'; // dotenv 모듈 불러오기
 import path from 'path';
 
-// .env 파일 경로 지정
-dotenv.config({ path: path.join(__dirname, 'keys', '.env') });
+// .env 파일 로드 (현재 디렉토리에서 .env 파일을 불러옴)
+dotenv.config();  // 기본 경로로 .env 파일을 로드합니다.
 
 const app = express();
 const port = 3000;
