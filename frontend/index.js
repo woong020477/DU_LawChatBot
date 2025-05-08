@@ -48,12 +48,16 @@ document.addEventListener('DOMContentLoaded', () => {
       }
 
       const data = await response.json();
-      const botMessage = data.botMessage;  // GPT 응답 받기
+      let botMessage = data.botMessage;  // GPT 응답 받기
 
-      // GPT 응답 생성
+      // 마침표 기준으로 줄바꿈 추가 (". "을 ".<br>"로 대체)
+      botMessage = botMessage.replace(/([.])\s+/g, '$1<br>');
+
+      // GPT 응답 생성 (innerText → innerHTML로 변경)
       const botChat = document.createElement('div');
       botChat.className = 'chat-message bot-message';
-      botChat.innerText = botMessage;
+      botChat.innerHTML = botMessage;  // 줄바꿈 적용된 HTML
+
       chatLog.appendChild(botChat);
 
       // 화면 스크롤을 최신 메시지로 이동
