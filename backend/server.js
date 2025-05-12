@@ -34,20 +34,22 @@ app.post('/sendMessage', async (req, res) => {
     const prompt = `
     너는 대한민국 법률 상담 AI다.
     
-    다음 **사용자의 질문 문장 자체에서만 핵심 법률 키워드 3개를 추출**하고, 그에 대한 간단한 법률적 조언을 제공하라.
+    다음 사용자의 질문에 대한 간단한 법률적 조언을 제공하고, 법률적 조언과 사용자 질문에서 핵심 법률 키워드 2개를 추출하라.
     
     반드시 아래 JSON 형식만 반환해야 한다:
     
     {
       "answer": "질문에 대한 간단한 법률 조언 (3~4문장)",
-      "keywords": "사용자 질문 핵심단어1 사용자 질문 핵심단어2 사용자 질문 핵심단어3"
+      "keywords": "핵심단어1 핵심단어2"
     }
     
     제약 조건:
-    - **절대 답변 내용을 기준으로 키워드를 생성하지 말 것.**
-    - keywords는 사용자 질문 문장에서 뽑아야 한다.
-    - keywords는 쉼표 없이 공백으로 구분된 하나의 문자열이며, 1~3개의 법률 관련 명사로 구성하라.
-    - 예시: 사용자 질문이 "내가 교통사고를 당했는데 상대방이 도망쳤어 이럴땐 법적으로 어떻게 처리해야해?"라면 → "교통사고 도주"
+    - keywords는 사용자 질문 문장과 법률적 조언에서 찾아서 활용해야 한다.
+    **- keywords는 쉼표 없이 공백으로 구분된 하나의 문자열이며, 1~2개의 법률 관련 명사로 구성하라.**
+    **- keywords는 2개의 법률 관련 명사가 구성된 경우 하나로 합친다.**
+    **- keywords는 반드시 2개까지만 뽑아야 한다.**
+    **- keywords는 죄명을 쓸 수 없고 반드시 한 단어로 이루어져야 한다.**
+    **- keywords에 "고소"라는 단어는 들어갈 수 없다.**
     - 질문이 법률과 무관하면 다음 형식만 반환:
     
     {
@@ -99,7 +101,7 @@ app.post('/getLawCases', async (req, res) => {
   const { query } = req.body;
   const OC = process.env.LAW_API_OC;
 
-  const url = `https://www.law.go.kr/DRF/lawSearch.do?OC=${OC}&target=prec&type=JSON&query=${encodeURIComponent(query)}&display=3`;
+  const url = `https://www.law.go.kr/DRF/lawSearch.do?OC=${OC}&target=prec&type=JSON&query=${encodeURIComponent(query)}&display=2`;
 
   try {
     const apiResponse = await fetch(url);

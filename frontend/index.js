@@ -97,16 +97,16 @@ document.addEventListener('DOMContentLoaded', () => {
             items.forEach(item => {
               const link = item.상세링크; // 서버에서 전달된 링크 사용
               console.log("판례 링크:", link); // 디버깅 로그
-            
+
               const card = document.createElement('div');
-              card.style = 'margin-bottom: 12px; padding: 12px; background: #f3f3f3; border-radius: 8px;';
+              card.className = 'case-card'; // 클래스 이름 지정
               card.innerHTML = `
                 <strong>${item.사건명}</strong><br>
                 <span>${item.판결유형 || '판결 유형 없음'} / ${item.선고일자}</span><br>
                 <a href="${link}" target="_blank">자세히 보기</a>
               `;
               casePanel.appendChild(card);
-            });            
+            });
           })
           .catch(err => {
             console.error("판례 검색 실패:", err);
