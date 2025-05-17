@@ -7,5 +7,5 @@
 >1. backend 폴더 내에 .env 생성  
 >2. https://open.law.go.kr/LSO/main.do 에서 회원가입 후 OPEN API 신청  
 >3. .env 파일에 하단의 내용 기입  
->   > OPENAI_API_KEY=키
+>   > OPENAI_API_KEY=키  
 >   > LAW_API_OC=국가법령정보 공동활용 OPEN API 승인된 아이디
