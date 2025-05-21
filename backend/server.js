@@ -27,28 +27,67 @@ app.post('/sendMessage', async (req, res) => {
 
   try {
     const prompt = `
-당신은 대한민국 법률 상담 AI입니다.
+    당신은 대한민국 법률 상담 AI입니다.
 
-다음 사용자 질문을 분석하여 질문 문장에서 핵심 법률 키워드 1개에서 3개를 추출하고, 간단한 법률적 조언을 제공합니다.
+    다음 사용자 질문을 분석하여, 아래 3가지 중 하나의 JSON 형식으로 **정확히 하나만 출력**하십시오:
 
-출력 형식은 반드시 아래 JSON 형식이어야 합니다:
+    ---
 
-{
-  "answer": "질문에 대한 간단한 법률 조언",
-  "keywords": "공백으로 구분된 핵심 키워드"
-}
+    1 질문이 구체적이고 법률적으로 충분한 경우:
+    - 질문이 법률적 사건에 해당하는지 판단
+    - 고소가 가능한 경우:
+      - 고소 가능성을 설명하고
+      - 필요한 증거/자료 준비 방법
+      - 변호사와 상담 시 필요한 준비사항을 구체적으로 안내
+    - 고소가 불가능한 경우:
+      - 이유를 법적으로 설명하고
+      - 가능한 대안 조치를 제안
+    - 마지막 줄에 반드시 다음 문장을 추가하십시오:  
+      "이와 유사한 상황의 판례입니다."
+    - 핵심 키워드 1개를 추출하여 'keywords'에 포함 (문장이 아닌 단어, 쉼표 없이)
 
-조건:
-- 반드시 질문 문장에서만 핵심어를 추출할 것
-- keywords는 쉼표나 따옴표 없이 한글 단어만 공백으로 구분한 문자열
-- 법률적 상황이 아닐 경우 다음 형식만 반환
+    {
+      "status": "complete",
+      "answer": "자세한 법률 조언 ... 마지막 줄: 이와 유사한 상황의 판례입니다.",
+      "keywords": "한글키워드1"
+    }
 
-{
-  "answer": "법률적 상황에 대한 답변만 가능합니다. 다시 질문해주세요."
-}
+    ---
 
-사용자 질문: "${userMessage}"
-`;
+    2 질문이 법률적 가능성이 있으나 정보가 부족하거나 모호한 경우:
+    - 질문에 사건, 사고, 피해, 분쟁 등 **법률적 사안일 가능성이 있는 진술**이 포함되어 있다면 이 범주로 처리하십시오.
+    - followUp 항목에 전제 없이 열린 질문을 제시
+    - followUp 문장에는 단정 표현이나 가정 포함 금지
+
+    {
+      "status": "incomplete",
+      "followUp": "정확한 판단을 위해 언제, 어떤 상황에서 발생했는지 자세히 알려주세요."
+    }
+
+    ---
+
+    3 질문이 명백히 법률과 무관한 경우 (예: 날씨, 음식, 게임, 연애, 감정 토로 등 단순 대화):
+    - 법률적 조언이 불가능함을 분명히 안내하십시오
+    - 이 범주는 매우 엄격하게 제한하여 사용하십시오
+
+    {
+      "status": "invalid",
+      "answer": "법률적 상황에 대한 질문만 가능합니다. 다시 질문해주세요."
+    }
+
+    ---
+
+     조건:
+    - 반드시 위 세 가지 중 하나의 JSON만 출력
+    - ‘교통사고를 당했다’, ‘부당하게 대우받았다’, ‘상대방이 때렸다’ 등 **사건 서술이 포함된 질문은 무조건 status: incomplete 이상으로 판단할 것**
+    - keywords는 반드시 한글 단어 1개 (예: "계약", "명예훼손", "사기")
+    - answer는 마지막 줄에 항상: "이와 유사한 상황의 판례입니다."
+    - followUp은 열린 질문 형태로 작성하며, 반드시 **1~2개의 질문 문장**으로 구성할 것
+
+    ---
+
+    사용자 질문: "${userMessage}"
+    `;
 
     const gptResponse = await fetch('https://api.openai.com/v1/chat/completions', {
       method: 'POST',                                   // POST 방식으로 GPT API 호출
@@ -78,7 +117,7 @@ app.post('/getLawCases', async (req, res) => {
   const { query } = req.body;                                     // 클라이언트에서 전달한 검색어 추출
   const OC = process.env.LAW_API_OC;                              // .env에 저장된 사용자 인증 OC 값 사용
 
-  const url = `https://www.law.go.kr/DRF/lawSearch.do?OC=${OC}&target=prec&type=JSON&query=${encodeURIComponent(query)}&display=3`;
+  const url = `https://www.law.go.kr/DRF/lawSearch.do?OC=${OC}&target=prec&type=JSON&query=${encodeURIComponent(query)}&display=5`;
 
   console.log("법령 API 요청 URL:", url);                        // 실제 요청 URL 로그 출력
 
