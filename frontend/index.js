@@ -1,5 +1,7 @@
 /* 이 스크립트는 DOM이 로드된 후, GPT API와 판례 API를 통해 법률 상담 및 유사 판례를 제공하는 챗봇 기능을 수행함 */
 
+let previousMessage = ''; // 이전 질문 저장
+
 document.addEventListener('DOMContentLoaded', () => {
   const chatLog = document.querySelector('#chat-log');  // 채팅 메시지를 표시할 영역
   const sendButton = document.querySelector('#send-button');  // 전송 버튼 요소
@@ -16,152 +18,143 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   if (!chatLog || !sendButton || !messageInput) {
-    console.error("필요한 HTML 요소가 없습니다");  // 필수 요소가 없을 경우 오류 출력 후 중단
+    console.error("필요한 HTML 요소가 없습니다"); // 필수 요소가 없을 경우 오류 출력 후 중단
     return;
   }
 
   /* 사용자 메시지를 서버로 전송하고 GPT의 응답 및 판례 검색 결과를 처리하는 함수 */
   async function sendMessage() {
-    const message = messageInput.value;  // 사용자 입력값 가져오기
-    if (!message) return;  // 입력값이 없으면 중단
+    const message = messageInput.value.trim();  // 사용자 입력 값 가져오기
+    if (!message) return; // 입력값 없으면 중단
 
-    const userChat = document.createElement('div');  // 사용자 메시지 요소 생성
-    userChat.className = 'chat-message user-message';  // 사용자 메시지 스타일 클래스 지정
-    userChat.innerText = message;  // 사용자 입력 텍스트 삽입
+    // 사용자 메시지 출력
+    const userChat = document.createElement('div'); // 사용자 메시지 요소 생성
+    userChat.className = 'chat-message user-message'; // 사용자 메시지 CSS 클래스 지정
+    userChat.innerText = message; // 사용자 입력 텍스트 삽입
     chatLog.appendChild(userChat);  // 채팅 로그에 추가
+
+    // 앞선 질문과 병합
+    const finalMessage = previousMessage
+      ? `${previousMessage}\n추가 정보: ${message}`
+      : message;
 
     try {
       // 서버의 /sendMessage 엔드포인트에 사용자 질문을 POST로 전달
       const response = await fetch('http://localhost:3000/sendMessage', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ userMessage: message })  // 사용자 메시지를 JSON으로 보냄
+        body: JSON.stringify({ userMessage: finalMessage }) // 사용자 메시지를 JSON으로 보냄
       });
 
-      if (!response.ok) throw new Error('서버 요청 실패');  // 실패 시 오류 발생
+      if (!response.ok) throw new Error('서버 요청 실패');  // 실패 시 오류 반환
 
-      const data = await response.json();  // 서버 응답을 JSON으로 파싱
-      let json;
+      const data = await response.json(); // 서버 응답을 JSON으로 파싱
+      const json = typeof data.botMessage === 'string' ? JSON.parse(data.botMessage) : data.botMessage; // botMessage가 문자열이면 파싱
 
-      try {
-        json = typeof data.botMessage === 'string' ? JSON.parse(data.botMessage) : data.botMessage;  // botMessage가 문자열이면 파싱
-      } catch (e) {
-        console.error('GPT 응답 파싱 실패:', data.botMessage);  // 파싱 실패 시 로그 출력
-        return;
+      const casePanel = document.querySelector('.right-panel');
+      casePanel.innerHTML = '<h3>유사한 판례</h3>';
+
+      switch (json.status) {  // GPT 응답 JSON 파일에서 status변수의 상태에 따라 대처
+
+        // 구체적인 법률적 상황이 입력된 경우 자세한 법률적 조언 및 유사한 판례 출력
+        case 'complete':
+          previousMessage = ''; // 초기화
+          const answer = (json.answer || '응답 없음').replace(/([.])\s+/g, '$1<br>'); // 응답이 없으면 기본 메시지 출력, 있으면 마침표 단위로 줄바꿈 처리
+          const botChat = document.createElement('div');  // GPT 응답 메세지 요소 설정
+          botChat.className = 'chat-message bot-message'; // 봇 메세지 CSS 클래스 지정
+          botChat.innerHTML = answer; // 응답 텍스트 삽입
+          chatLog.appendChild(botChat); // 채팅 로그 추가
+          chatLog.scrollTop = chatLog.scrollHeight; // 새로운 채팅이 오면 자동으로 스크롤 하단으로 이동
+
+          // 판례 검색 실행
+          const rawKeywords = json.keywords;  // GPT 응답 JSON 파일 속 키워드를 rawKeywords에 저장
+          const keywordText = Array.isArray(rawKeywords)  
+            ? rawKeywords.join(' ')
+            : typeof rawKeywords === 'string'
+              ? rawKeywords
+              : '';
+          //server.js에 keywordText를 전달(POST)해 getLawCases메소드 수행
+          if (keywordText.trim()) {
+            fetch('http://localhost:3000/getLawCases', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({ query: keywordText.trim() }) // 키워드 전송
+            })
+              .then(res => res.json())  // JSON으로 응답 파싱
+              .then(result => {
+                const items = result?.PrecSearch?.prec; // 판례 목록 추출
+                if (!items || !items.length) return;  // 판례가 없을경우 null 반환
+                items.forEach(item => { // 유사한 판례 양식
+                  const card = document.createElement('div');
+                  card.className = 'case-card';
+                  card.innerHTML = `
+                    <strong>${item.사건명}</strong><br>
+                    <span>${item.판결유형 || '판결 유형 없음'} / ${item.선고일자}</span><br>
+                    <a href="${item.상세링크}" target="_blank">자세히 보기</a>
+                  `;
+                  casePanel.appendChild(card);
+                });
+              })
+              .catch(err => console.error("판례 검색 실패:", err)); // 판례 API 오류 발생 시 출력
+          }
+          break;
+        
+          // 법률적 상황이지만 질문이 모호할 경우 추가 질문을 요구하는 메시지 출력
+        case 'incomplete':
+          previousMessage = finalMessage;
+          const followUp = json.followUp || '질문이 부족합니다. 구체적인 상황을 알려주세요.';
+          const followChat = document.createElement('div');
+          followChat.className = 'chat-message bot-message';
+          followChat.innerText = followUp;
+          chatLog.appendChild(followChat);
+          break;
+
+        // 법률적 상황에 관한 질문이 아닐경우 "법률적 상황에 대한 답변만 가능합니다" 메세지 출력
+        case 'invalid':
+          previousMessage = '';
+          const invalidChat = document.createElement('div');
+          invalidChat.className = 'chat-message bot-message';
+          invalidChat.innerText = json.answer || '법률적 질문만 가능합니다.';
+          chatLog.appendChild(invalidChat);
+          break;
+
+        default:
+          console.warn("알 수 없는 status 응답:", json);
+          break;
       }
 
-      let answer = json.answer || '응답 없음';  // 응답이 없으면 기본 메시지
-      answer = answer.replace(/([.])\s+/g, '$1<br>');  // 마침표 단위로 줄바꿈 처리
-
-      const botChat = document.createElement('div');  // GPT 응답 메시지 요소 생성
-      botChat.className = 'chat-message bot-message';  // 봇 메시지 스타일 적용
-      botChat.innerHTML = answer;  // 응답 텍스트 삽입
-      chatLog.appendChild(botChat);  // 채팅 로그에 추가
-      chatLog.scrollTop = chatLog.scrollHeight;  // 자동 스크롤 하단으로 이동
-
-      const casePanel = document.querySelector('.right-panel');  // 판례 출력 패널 선택
-      casePanel.innerHTML = '<h3>유사한 판례</h3>';  // 판례 영역 초기화
-
-      // "법률적 상황에 대한 답변만 가능합니다" 메시지가 아닌 경우에만 판례 검색
-      if (!answer.includes('법률적 상황에 대한 답변만 가능합니다')) {
-        const rawKeywords = json.keywords;  // GPT 응답에서 키워드 추출
-
-        const keywordText = Array.isArray(rawKeywords)
-          ? rawKeywords.join(' ')  // 배열이면 공백으로 연결
-          : typeof rawKeywords === 'string'
-            ? rawKeywords
-            : '';  // 없거나 이상한 값이면 빈 문자열
-
-        console.log("검색 키워드 문자열:", keywordText);  // 검색어 로그 출력
-
-        // 서버에 판례 검색 요청을 보냄
-        fetch('http://localhost:3000/getLawCases', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({ query: keywordText.trim() })  // 검색어 전송
-        })
-          .then(res => {
-            console.log("응답 상태:", res.status);  // HTTP 응답 코드 출력
-            return res.json();  // JSON으로 응답 파싱
-          })
-          .then(result => {
-            console.log("응답 데이터:", result);  // 전체 응답 로그 출력
-
-            const items = result?.PrecSearch?.prec;  // 판례 목록 추출
-            if (!items || !items.length) {
-              console.warn("판례 없음");  // 판례가 없을 경우 경고 로그
-              return;
-            }
-
-            // 각 판례마다 카드 생성
-            items.forEach(item => {
-              const link = item.상세링크;  // 서버에서 생성된 판례 상세 링크 사용
-              console.log("판례 링크:", link);  // 링크 로그 출력
-
-              const card = document.createElement('div');  // 카드 요소 생성
-              card.className = 'case-card';  // 카드 스타일 클래스 지정
-              card.innerHTML = `
-                <strong>${item.사건명}</strong><br>
-                <span>${item.판결유형 || '판결 유형 없음'} / ${item.선고일자}</span><br>
-                <a href="${link}" target="_blank">자세히 보기</a>
-              `;  // 카드 내용 구성
-              casePanel.appendChild(card);  // 우측 패널에 카드 추가
-            });
-          })
-          .catch(err => {
-            console.error("판례 검색 실패:", err);  // 통신 실패 시 로그 출력
-          });
-      }
     } catch (err) {
-      console.error('에러 발생:', err);  // 전체 오류 출력
-      const botChat = document.createElement('div');  // 오류 메시지용 봇 말풍선
+      console.error('에러 발생:', err); // 전체 범위의 에러 발생 시 서버 로그 출력
+      const botChat = document.createElement('div');
       botChat.className = 'chat-message bot-message';
-      botChat.innerText = '서버 오류가 발생했습니다. 다시 시도해주세요.';
+      botChat.innerText = '서버 오류가 발생했습니다. 다시 시도해주세요.'; // 챗봇에 에러 발생 시 로그 출력
       chatLog.appendChild(botChat);
     }
 
-    messageInput.value = '';  // 입력창 초기화
+    messageInput.value = '';
   }
 
-  /* 전송 버튼 클릭 시 sendMessage 함수 실행 */
-  sendButton.addEventListener('click', () => {
-    const message = messageInput.value;
-    if (message) {
-      sendMessage();  // 메시지 전송
+  // 전송 버튼 클릭 or Enter 키 클릭 시 메시지 전송
+  sendButton.addEventListener('click', sendMessage);
+  messageInput.addEventListener('keydown', (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      sendMessage();
       messageInput.value = '';  // 입력 필드 초기화
     }
   });
-
-  /* 엔터 키 입력 시 메시지 전송 */
-  messageInput.addEventListener('keydown', (event) => {
-    if (event.key === 'Enter') {
-      event.preventDefault();  // 줄바꿈 방지
-      const message = messageInput.value;
-      if (message) {
-        sendMessage();
-        messageInput.value = '';
-      }
-    }
-  });
-
-  /* 설정 팝업 열기 */
-  function openSettings() {
+  // 설정 팝업 열기
+  window.openSettings = function () {
     const overlay = document.getElementById('settings-overlay');
-    if (overlay) {
-      overlay.classList.remove('hidden');  // hidden 클래스 제거하여 보이도록 함
-    }
-  }
-
-  /* 설정 팝업 닫기 */
-  function closeSettings() {
+    if (overlay) overlay.classList.remove('hidden');
+  };
+  // 설정 팝업 닫기기
+  window.closeSettings = function () {
     const overlay = document.getElementById('settings-overlay');
-    if (overlay) {
-      overlay.classList.add('hidden');  // hidden 클래스 추가하여 숨김
-    }
-  }
-
-  /* 라이트 모드 또는 다크 모드 설정 */
-  function setMode(mode) {
+    if (overlay) overlay.classList.add('hidden');
+  };
+  // 라이트 모드 or 다크 모드 설정
+  window.setMode = function (mode) {
     if (mode === 'light') {
       document.body.classList.remove('dark');
       document.body.classList.add('light');
@@ -169,8 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
       document.body.classList.remove('light');
       document.body.classList.add('dark');
     }
-  }
-
+  };
   // 설정 함수들을 전역으로 노출
   window.openSettings = openSettings;
   window.closeSettings = closeSettings;
