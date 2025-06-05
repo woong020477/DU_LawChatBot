@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 42056993,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1994. 12. 22. 선고 94후555 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1994-12-22",
+    "caseNoID": "94후555",
+    "caseNo": "94후555"
+  },
+  "jdgmn": "과일주스 등을 지정상품으로 한 상표 “Drink in the Sun”\n의 식별력 을 인정할 수 있는지 여부",
+  "jdgmnInfo": [
+    {
+      "question": "과일주스 등을 지정상품으로 한 상표 “Drink in the Sun”에 식별력이 있는가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "출원상표 “Drink in the Sun”은 그 지정상품인 과일주스 등과 관련하여 볼 때 “태양 아래에서 마셔라”라는 뜻의 단순한 권유문으로 직감될 것이어서 일반수요자들로서는 이를 흔히 쓰일 수 있는 구호나 광고문안 정도로 인식할 수 있어 상표만에 의하여 그 상품의 출처를 인식하기 어렵다고 할 것이므로 상표법상의 식별력을 인정할 수 없다.",
+      "summ_pass": "흔히 쓰일 수 있는 구호나 광고문안 정도로 인식할 수 있어 상표만에 의하여 그 상품의 출처를 인식하기 어렵다고 할 것이므로 상표법상의 식별력을 인정할 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "상표법상의 식별력"
+    },
+    {
+      "id": 2,
+      "keyword": "출원상표"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제6조 제1항 제7호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "특허 거절"
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 44044004,
+    "dataType": "판결문",
+    "caseNm": "손해배상(기)·매매대금반환",
+    "caseTitle": "대법원 2017. 5. 30. 선고 2014다233176 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "2017-05-30",
+    "caseNoID": "2014다233176",
+    "caseNo": "2014다233176"
+  },
+  "jdgmn": "영국 계약법상 이행거절의 의미 및 이행거절의 의사를 표시했는지 판단하는 방법 / 당사자가 계약의 이행에 부정적이거나 소극적인 태도를 보인 경우, 이를 명백하고 확정적인 거절의 의사표시로 단정할 수 있는지 여부(소극)",
+  "jdgmnInfo": [
+    {
+      "question": "당사자가 계약의 이행에 부정적이거나 소극적인 태도를 보인 경우, 이를 명백하고 확정적인 거절의 의사표시로 단정할 수 있는가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "이행거절은 명확하고 분명하며 확정적이어야 한다[Chilean Nitrate Sales Corp. v Marine Transportation Co. [1982] 1 Lloyd's Rep. 570; SK Shipping (S) PTE Ltd. v Petroexport Ltd. [2009] EWHC 2974 (Comm) 참조]. 당사자가 계약의 이행에 부정적이거나 소극적인 태도를 보인다고 하더라도, 전체적인 상황을 고려하지 않고 이를 명백하고 확정적인 거절의 의사표시로 단정해서는 안 된다(Mersey Steel and Iron Co. v Naylor, Benzon & Co. [1884] 9 App. Cas. 434; Woodar Investment Development Ltd. v Wimpey Construction UK Ltd. [1980] 1 W.L.R. 277).",
+      "summ_pass": "이행거절은 명확하고 분명하며 확정적이어야 한다. 당사자가 계약의 이행에 부정적이거나 소극적인 태도를 보인다고 하더라도, 전체적인 상황을 고려하지 않고 이를 명백하고 확정적인 거절의 의사표시로 단정해서는 안 된다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "이행거절"
+    },
+    {
+      "id": 2,
+      "keyword": "의사표시"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "국제사법 제1조, 제25조 제1항",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "민사",
+    "instance_name": "손해배상"
+  }
+}

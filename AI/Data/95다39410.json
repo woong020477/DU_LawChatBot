@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 44046785,
+    "dataType": "판결문",
+    "caseNm": "가처분이의",
+    "caseTitle": "대법원 1996. 1. 26. 선고 95다39410 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1996-01-26",
+    "caseNoID": "95다39410",
+    "caseNo": "95다39410"
+  },
+  "jdgmn": "제3자 소유의 계쟁물이 처분금지가처분 대상이 될 수 있는지 여부",
+  "jdgmnInfo": [
+    {
+      "question": "제3자 소유의 계쟁물이 처분금지가처분 대상이 될 수 있는가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "처분금지가처분은 특정물의 인도 또는 특정의 급여를 목적으로 하는 청구권을 보전하기 위한 것이므로, 그 청구권의 목적인 계쟁물은 가처분에 의하여 보전될 강제집행이 될 수 있는 것이어야 하고, 따라서 그것이 제3자 소유라면 가처분의 대상으로 될 수 없다.",
+      "summ_pass": "제3자 소유의 계쟁물이 처분금지가처분 대상이 될 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "처분금지가처분"
+    },
+    {
+      "id": 2,
+      "keyword": "강제집행"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "민사소송법 제714조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "민사",
+    "instance_name": "가처분이의"
+  }
+}

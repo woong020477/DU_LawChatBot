@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 50966541,
+    "dataType": "판결문",
+    "caseNm": "입체금등",
+    "caseTitle": "대법원 1989. 9. 12. 선고 87다카3070 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1989-09-12",
+    "caseNoID": "87다카3070",
+    "caseNo": "87다카3070"
+  },
+  "jdgmn": "가. 선박보호약관상 추정전손에 관한 단일사고(Single Accident) 규정의 취지와 근인(Proximate Cause)의 원칙과의 관계\n나. 선박의 좌초와 선원의 이선으로 인한 원주민의 약탈이 동일한 사고로부터 생기는 일연의 손해에 해당하는지 여부(적극)",
+  "jdgmnInfo": [
+    {
+      "question": "선박의 좌초와 선원의 이선으로 인한 원주민의 약탈이 동일한 사고로부터 생기는 일련의 손해에 해당하는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "선박좌초후 선원의 이선으로 인해 원주민이 선박을 약탈한 경우 원주민의 약탈은 선행의 주된 보험사고라 할 수 있는 좌초의 기회에, 좌초에 기인하여 발생한 것이라는 점에서 좌초와 약탈을 단일사고, 특히 이 사건 보험약관 제12.2조 후단의 동일한 사고로부터 생기는 일련의 손해(Sequence of damages arising from the same accident)에 해당한다.",
+      "summ_pass": "특히 이 사건 보험약관 제12.2조 후단의 동일한 사고로부터 생기는 일련의 손해(Sequence of damages arising from the same accident)에 해당한다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "입체금"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상법 제693조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "민사",
+    "instance_name": "입체금"
+  }
+}

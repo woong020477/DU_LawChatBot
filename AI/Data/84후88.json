@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 51825572,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1985. 2. 13., 선고, 84후88, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1985-02-13",
+    "caseNoID": "84후88",
+    "caseNo": "84후88"
+  },
+  "jdgmn": "출원상표 “[그림1]”(지노)와 인용상표 “GYNO-PEVARYL”의 유사여부",
+  "jdgmnInfo": [
+    {
+      "question": "출원상표 “[그림1]”(지노)와 인용상표 “GYNO-PEVARYL”이 유사한가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "출원상표 “\n”(지노)와 인용선출원 등록상표 \"GYNO-PEVARYL\" 을 관찰해 보면 출원상표는 영문표기부분이 GYNO의 단일어로 되어 있고 인용상표는 GYNO와 PEVARYL의 복성어로 되어있어 그 칭호에 차이가 생기는 것은 사실이나 동일한 지정상품의 거래에 있어서 일반수요자는 그 직관적인 관찰에 따라 위 두 상표에 공통되는 “GYNO”라는 표기부분에 중점을 두고 그 상품의 출처를 동일한 것으로 오인 혼동할 우려가 충분히 있어 양상표는 서로 유사하다 할 것이다.",
+      "summ_pass": "일반수요자는 그 직관적인 관찰에 따라 위 두 상표에 공통되는 “GYNO”라는 표기부분에 중점을 두고 그 상품의 출처를 동일한 것으로 오인 혼동할 우려가 충분히 있어 양상표는 서로 유사하다 할 것이다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

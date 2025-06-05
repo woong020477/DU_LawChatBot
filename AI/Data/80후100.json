@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 59760994,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1981. 7. 7., 선고, 80후100, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1981-07-07",
+    "caseNoID": "80후100",
+    "caseNo": "80후100"
+  },
+  "jdgmn": "'MAGICLOTH' 와 'MAGIC'가 동일 또는 유사상표인지의 여부(적극)",
+  "jdgmnInfo": [
+    {
+      "question": "MAGICLOTH' 와 'MAGIC'가 동일 또는 유사상표인가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "그 지정상품이 상품구분 제49류인 본원상표 “MAGICLOTH” 중 “CLOTH”는 그 지정상품과 관련하여 볼 때 보통명칭을 표시한데 불과하므로 특별현저성이 결여된 것이고, 본원상표 “MAGICLOTH”중의 특별현저성 있는 부분인 “MAGIC” 와 인용상표 “MAGIC”를 비교하면 전혀 동일하므로 본원상표와 인용상표가 동일 또는 유사하다는 이유로 그 등록을 거절한 원사정은 정당하다.",
+      "summ_pass": "특별현저성이 결여된 것이고, 본원상표 “MAGICLOTH”중의 특별현저성 있는 부분인 “MAGIC” 와 인용상표 “MAGIC”를 비교하면 전혀 동일하므로 본원상표와 인용상표가 동일 또는 유사하다는 이유로 그 등록을 거절한 원사정은 정당하다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조 제1항 제9호, 제16조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

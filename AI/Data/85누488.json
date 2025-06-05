@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 54333004,
+    "dataType": "판결문",
+    "caseNm": "법인세등부과처분취소",
+    "caseTitle": "대법원 1985. 11. 12., 선고, 85누488, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1985-11-12",
+    "caseNoID": "85누488",
+    "caseNo": "85누488"
+  },
+  "jdgmn": "주된 납세의무자에 대한 시효중단의 효력이 제2차 납세의무자에게 미치는지 여부(적극)",
+  "jdgmnInfo": [
+    {
+      "question": "주된 납세의무자에 대한 시효중단의 효력이 제2차 납세의무자에게 미치는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "국세에 관한 제2차납세의무는 그 발생, 소멸에 있어 주된 납세의무에 부종하는 것이므로 주된 납세의무자에 대한 시효의 중단은 제2차납세의무자에 대하여도 그 효력이 있다.",
+      "summ_pass": "주된 납세의무자에 대한 시효의 중단은 제2차납세의무자에 대하여도 그 효력이 있다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "법인세"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "국세기본법 제28조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "금융조세",
+    "instance_name": "법인세등부과처분취소"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 53041877,
+    "dataType": "판결문",
+    "caseNm": "이혼무효등",
+    "caseTitle": "대법원 1980. 1. 29., 선고, 79므11, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1980-01-29",
+    "caseNoID": "79므11",
+    "caseNo": "79므11"
+  },
+  "jdgmn": "구 관습법상 무효사유가 있는 혼인의 민법 시행후의 효력",
+  "jdgmnInfo": [
+    {
+      "question": "구 관습법상 무효사유가 있는 혼인이 민법 시행후에 효력을 갖는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "민법 시행전의 관습법상 혼인무효 사유가 있었어도 그 사유가 민법이 정한 무효사유에 해당하지 아니하는 이상 그 혼인은 민법 부칙 제2조본문의 규정에 의하여 민법시행 후에는 유효하다고 볼 것이다.",
+      "summ_pass": "그 혼인은 민법 부칙 제2조본문의 규정에 의하여 민법시행 후에는 유효하다고 볼 것이다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "혼인무효"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "민법 부칙 제2조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "가사",
+    "instance_name": "이혼무효등"
+  }
+}

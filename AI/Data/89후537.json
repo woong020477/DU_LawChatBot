@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 50951579,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1989. 12. 8., 선고, 89후537, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1989-12-08",
+    "caseNoID": "89후537",
+    "caseNo": "89후537"
+  },
+  "jdgmn": "본원상표 \"IVY HOUSE\"와 인용상표 \"아이비\"의 유사여부",
+  "jdgmnInfo": [
+    {
+      "question": "본원상표 \"IVY HOUSE\"와 인용상표 \"아이비\"가 유사한가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "본원상표 \"IVY HOUSE\"와 인용상표 \"아이비\"는 그 칭호에 있어서 유사하여 일반수요자나 소비자들이 그 상품의 출처에 관하여 오인, 혼동할 위험이 있다.",
+      "summ_pass": "그 칭호에 있어서 유사하여 일반수요자나 소비자들이 그 상품의 출처에 관하여 오인, 혼동할 위험이 있다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조 제1항",
+    "reference_court_case": "대법원 1989.11.14. 선고 89후544 판결"
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

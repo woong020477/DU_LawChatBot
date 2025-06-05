@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 54029884,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1983. 2. 22., 선고, 81후73, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1983-02-22",
+    "caseNoID": "81후73",
+    "caseNo": "81후73"
+  },
+  "jdgmn": "출원상표 “REVILLON”과 등록상표 “REV-LON”의 유사성",
+  "jdgmnInfo": [
+    {
+      "question": "출원상표 “REVILLON”과 등록상표 “REV-LON”의 유사성이 인정되는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "출원상표 “REVILLON”과 이미 등록된 인용상표 “REVLON”은 다 같이 영문자로 횡서표기한 상표로서 칭호상 세인으로 하여금 혼동하게 할 우려가 있고 외관상으로도 구성된 문자의 배열이 유사하여 동종품인 지정상품에 사용될 경우 일반거래자나 수요자로 하여금 상품출처의 오인, 혼동을 일으키게 할 염려가 있으므로 출원상표 “REVILLON”은 상표로서 등록할 수 없다.",
+      "summ_pass": "칭호상 세인으로 하여금 혼동하게 할 우려가 있고 외관상으로도 구성된 문자의 배열이 유사하여 동종품인 지정상품에 사용될 경우 일반거래자나 수요자로 하여금 상품출처의 오인, 혼동을 일으키게 할 염려가 있으므로 출원상표 “REVILLON”은 상표로서 등록할 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "지정상품에 사용"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조 제1항 제7호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

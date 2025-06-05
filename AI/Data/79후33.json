@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 55621339,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1979. 12. 11., 선고, 79후33, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1979-12-11",
+    "caseNoID": "79후33",
+    "caseNo": "79후33"
+  },
+  "jdgmn": "출원상표 \"P & H\"가 특별현저성이 있는지 여부",
+  "jdgmnInfo": [
+    {
+      "question": "출원상표 \"P &amp; H\"가 특별현저성이 있는가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "출원상표가 \"P&H\"와 같이 알파벳의 \"P\"자와 \"H\"자를 \"&\"라는 기호를 연결하여 횡서표시한 것에 지나지 않는 것은 상표등록의 요건인 특별현저성이 있다고 볼 수 없고 따라서\n상표법 제8조 제1항 제6호에서 말하는 간단하고 흔히 있는 표장에 지나지 아니하여 상표로서 등록될 수 없다.",
+      "summ_pass": "따라서\n상표법 제8조 제1항 제6호에서 말하는 간단하고 흔히 있는 표장에 지나지 아니하여 상표로서 등록될 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제2조, 제8조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

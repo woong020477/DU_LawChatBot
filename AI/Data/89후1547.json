@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 54159994,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1990. 2. 23., 선고, 89후1547, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1990-02-23",
+    "caseNoID": "89후1547",
+    "caseNo": "89후1547"
+  },
+  "jdgmn": "가요성 변속기 밴드를 지정상품으로 하는 출원상표 \"FLEX BAND\"의 등록가부(소극)",
+  "jdgmnInfo": [
+    {
+      "question": "가요성 변속기 밴드를 지정상품으로 하는 출원상표 \"FLEX BAND\"의 등록이 가능한가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "본원상표 FLEX BAND는 구부리기 쉬운 밴드라는 뜻으로 느껴질 것이어서 그 지정상품인 가요성 변속기 밴드의 성질을 직접적으로 표시하는 것으로상표법 제8조 제1항 제3호에 해당한다.",
+      "summ_pass": "그 지정상품인 가요성 변속기 밴드의 성질을 직접적으로 표시하는 것으로상표법 제8조 제1항 제3호에 해당한다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제8조 제1항 제3호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

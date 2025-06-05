@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 57671197,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1990. 4. 10., 선고, 89후1929, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1990-04-10",
+    "caseNoID": "89후1929",
+    "caseNo": "89후1929"
+  },
+  "jdgmn": "출원상표 \"SEMCO 셈코\"가 인용표장 \"SEMKO\"와 유사하여 상품의 품질을 오인케 할 염려가 있는지 여부(적극)",
+  "jdgmnInfo": [
+    {
+      "question": "출원상표 \"SEMCO 셈코\"가 인용표장 \"SEMKO\"와 유사하여 상품의 품질을 오인케 할 염려가 있는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "본원상표 \"\"에서 한글 \"셈코\"는 영문자 \"SEMCO\"의 한글발음표기에 불과하고 스웨덴 전기안전규격명 \"Svensk Elektriska Materielkontroila-nstalten\"의 약자인 인용표장 \"SEMKO\"와는 넷째글자가 각각 \"C\"와 \"K\"로 차이가 있는 데 불과하여 외관이 유사하고 칭호가 동일하므로 본원상표를 그 지정상품인 전기기기 등에 등록사용하게 되면 일반수요자들에게 그 상품이 스웨덴 전기 안전규격에 합격한 제품으로 인식되어 상품의 품질을 오인, 혼동케 할 염려가 있다.",
+      "summ_pass": "lkontroila-nstalten\"의 약자인 인용표장 \"SEMKO\"와는 넷째글자가 각각 \"C\"와 \"K\"로 차이가 있는 데 불과하여 외관이 유사하고 칭호가 동일하므로 본원상표를 그 지정상품인 전기기기 등에 등록사용하게 되면 일반수요자들에게 그 상품이 스웨덴 전기 안전규격에 합격한 제품으로 인식되어 상품의 품질을 오인, 혼동케 할 염려가 있다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조 제1항 제11호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

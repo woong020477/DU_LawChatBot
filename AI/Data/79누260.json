@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 57417688,
+    "dataType": "판결문",
+    "caseNm": "법인세부과처분취소",
+    "caseTitle": "대법원 1979. 11. 13., 선고, 79누260, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1979-11-13",
+    "caseNoID": "79누260",
+    "caseNo": "79누260"
+  },
+  "jdgmn": "조세감면규제법 제17조 제1항 제2호해당사유에 고의가 필요하는지 여부",
+  "jdgmnInfo": [
+    {
+      "question": "조세감면규제법 제17조 제1항 제2호 해당사유에 고의가 필요하는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "법인이 정부조사 결정액보다 미달하게 기업합리화 적립금을 적립하였다 하여도 고의적인 것이 아닌 이상 조세감면규제법 제17조 제1항 제2호에 해당사유로 규정지을 수 없다.",
+      "summ_pass": "고의적인 것이 아닌 이상 조세감면규제법 제17조 제1항 제2호에 해당사유로 규정지을 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "법인세"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "조세감면규제법 제17조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "금융조세",
+    "instance_name": "법인세부과처분취소"
+  }
+}

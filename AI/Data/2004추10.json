@@ -1,0 +1,64 @@
+{
+  "info": {
+    "id": 43018646,
+    "dataType": "판결문",
+    "caseNm": "전라북도학교급식조례재의결무효확인",
+    "caseTitle": "대법원 2005. 9. 9. 선고 2004추10 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "2005-09-09",
+    "caseNoID": "2004추10",
+    "caseNo": "2004추10"
+  },
+  "jdgmn": "[1] 지방자치단체가 제정한 조례가 ‘1994년 관세 및 무역에 관한 일반협정’(General Agreement on Tariffs and Trade 1994)이나 ‘정부조달에 관한 협정’(Agreement on Government Procurement)에 위반되는 경우, 그 조례의 효력(=무효)\n[2] 학교급식을 위해 국내 우수농산물을 사용하는 자에게 식재료나 구입비의 일부를 지원하는 것 등을 내용으로 하는 지방자치단체의 조례안이 ‘1994년 관세 및 무역에 관한 일반협정’(General Agreement on Tariffs and Trade 1994)에 위반되어 그 효력이 없다고 한 사례",
+  "jdgmnInfo": [
+    {
+      "question": "지방자치단체가 제정한 조례가 ‘1994년 관세 및 무역에 관한 일반협정’(General Agreement on Tariffs and Trade 1994)이나 ‘정부조달에 관한 협정’(Agreement on Government Procurement)에 위반되는 경우 무효인지?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "‘1994년 관세 및 무역에 관한 일반협정’(General Agreement on Tariffs and Trade 1994, 이하 ‘GATT’라 한다)은 1994. 12. 16. 국회의 동의를 얻어 같은 달 23. 대통령의 비준을 거쳐 같은 달 30. 공포되고 1995. 1. 1. 시행된 조약인 ‘세계무역기구(WTO) 설립을 위한 마라케쉬협정’(Agreement Establishing the WTO)(조약 1265호)의 부속 협정(다자간 무역협정)이고, ‘정부조달에 관한 협정’(Agreement on Government Procurement, 이하 ‘AGP’라 한다)은 1994. 12. 16. 국회의 동의를 얻어 1997. 1. 3. 공포시행된 조약(조약 1363호, 복수국가간 무역협정)으로서 각 헌법 제6조 제1항에 의하여 국내법령과 동일한 효력을 가지므로 지방자치단체가 제정한 조례가 GATT나 AGP에 위반되는 경우에는 그 효력이 없다.",
+      "summ_pass": "‘1994년 관세 및 무역에 관한 일반협정’이나 ‘정부조달에 관한 협정’은 헌법 제6조 제1항에 의하여 국내법령과 동일한 효력을 가지므로 지방자치단체가 제정한 조례가 ‘1994년 관세 및 무역에 관한 일반협정’이나 ‘정부조달에 관한 협정’에 위반되는 경우에는 효력이 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "1994년 관세 및 무역에 관한 일반협정"
+    },
+    {
+      "id": 2,
+      "keyword": "GATT"
+    },
+    {
+      "id": 3,
+      "keyword": "정부조달에 관한 협정"
+    },
+    {
+      "id": 4,
+      "keyword": "AGP"
+    },
+    {
+      "id": 5,
+      "keyword": "헌법 제6조 제1항"
+    },
+    {
+      "id": 6,
+      "keyword": "국내법령과 동일한 효력"
+    },
+    {
+      "id": 7,
+      "keyword": "조례"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "[1] 지방자치법 제15조 / 헌법 제6조 제1항 [2] 지방자치법 제15조 / 헌법 제6조 제1항 / ‘1994년 관세 및 무역에 관한 일반협정’(General Agreement on Tariffs and Trade 1994) 제3조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "행정",
+    "instance_name": "지방자치법"
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 58002606,
+    "dataType": "판결문",
+    "caseNm": "권리범위확인",
+    "caseTitle": "대법원 1989. 10. 24., 선고, 89후18, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1989-10-24",
+    "caseNoID": "89후18",
+    "caseNo": "89후18"
+  },
+  "jdgmn": "'도시락밥과 찬'과 '도시락상'이 동종상표인지 여부(소극)",
+  "jdgmnInfo": [
+    {
+      "question": "도시락밥과 찬'과 '도시락상'이 동종상표인가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "상품의 형상, 용도 그리고 거래실정을 감안하여 볼 때 '도시락상'과 '도시락밥과 찬'은 별개의 상품으로 간주되며, 동일 또는 유사한 상표가 사용되었을 때도 오인, 혼동의 염려가 있다고 판단되지 아니한다.",
+      "summ_pass": "동일 또는 유사한 상표가 사용되었을 때도 오인, 혼동의 염려가 있다고 판단되지 아니한다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "권리범위확인"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제23조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "권리범위확인"
+  }
+}
