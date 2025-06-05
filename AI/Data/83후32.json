@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 56664749,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1984. 1. 24., 선고, 83후32, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1984-01-24",
+    "caseNoID": "83후32",
+    "caseNo": "83후32"
+  },
+  "jdgmn": "등록상표 \"MODERN ENGLISH SELF LEARNING\" 과 인용상표 \"현대영어사\"의 유사여부",
+  "jdgmnInfo": [
+    {
+      "question": "등록상표 \"MODERN ENGLISH SELF LEARNING\"과 인용상표 \"현대영어사\"가 유사한가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "상표를 구성하는 일부의 외관, 칭호 또는 관념에 유사한 부분이 있다고 하더라도 그 부분이 상표구성의 일부에 국한된 것이라면 양상표를 전체적으로 관찰하여 반드시 유사한 것이라고 단정할 수는 없다 할 것인 바, 본 건 등록상표 「MODERN ENGLISH SELF-LEARNING」과 인용상표 \"현대영어사\"는 외관과 칭호에 있어서 현저하게 상위할 뿐만 아니라 그 관념에 있어서 \"현대영어\"라는 부분이 유사하게도 보이지만 전체적 의미는 전자는 학습내용을, 후자는 업체명을, 각 의미하는 것이어서 상호유사하지 아니하다.",
+      "summ_pass": "외관과 칭호에 있어서 현저하게 상위할 뿐만 아니라 그 관념에 있어서 \"현대영어\"라는 부분이 유사하게도 보이지만 전체적 의미는 전자는 학습내용을, 후자는 업체명을, 각 의미하는 것이어서 상호유사하지 아니하다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조 제1항, 제16조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

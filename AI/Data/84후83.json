@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 54845303,
+    "dataType": "판결문",
+    "caseNm": "상표등록무효",
+    "caseTitle": "대법원 1985. 4. 9., 선고, 84후83, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1985-04-09",
+    "caseNoID": "84후83",
+    "caseNo": "84후83"
+  },
+  "jdgmn": "가. 대법원 환송판결의 특허청에 대한 기속력\n나. 침구와 가구류가 동종상품인지 여부",
+  "jdgmnInfo": [
+    {
+      "question": "침구와 가구류가 동종상품인가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "침구는 사회통념이나 일반거래상 이불, 요, 베개 등으로 의자, 침대, 농, 진열장 등을 지칭하는 가구류와는 동종의 상품이라 할 수 없다.",
+      "summ_pass": "의자, 침대, 농, 진열장 등을 지칭하는 가구류와는 동종의 상품이라 할 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "상표등록무효"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "가. 특허법 제144조, 상표법 제56조 나. 상표법 제9조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "상표등록무효"
+  }
+}

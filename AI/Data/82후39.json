@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 50743730,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1984. 10. 10., 선고, 82후39, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1984-10-10",
+    "caseNoID": "82후39",
+    "caseNo": "82후39"
+  },
+  "jdgmn": "본원상표 “POLO Ralph Lauren”과 인용상표 “POLA”의 유사여부",
+  "jdgmnInfo": [
+    {
+      "question": "본원상표 “POLO Ralph Lauren”과 인용상표 “POLA”가 유사한가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "상표상호간에 서로 다른 부분이 있다고 하더라도 그 요부를 이루는 부분이 유사하여 전체적 관찰에서 피차 혼동하기 쉬운 것은 유사상표라고 할 것이므로 본원상표 “POLO Ralph lauren”과 인용상표 “POLA”를 대비하면 본원상표의 요부는 POLO로서 인용상표 POLA와는 그 호칭, 외관에 있어서 일견 오인 혼동할 정도로 유사하다.",
+      "summ_pass": "본원상표 “POLO Ralph lauren”과 인용상표 “POLA”를 대비하면 본원상표의 요부는 POLO로서 인용상표 POLA와는 그 호칭, 외관에 있어서 일견 오인 혼동할 정도로 유사하다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "유사상표"
+    },
+    {
+      "id": 2,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

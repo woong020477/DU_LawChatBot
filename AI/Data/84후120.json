@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 57785869,
+    "dataType": "판결문",
+    "caseNm": "상표등록무효",
+    "caseTitle": "대법원 1985. 3. 12., 선고, 84후120, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1985-03-12",
+    "caseNoID": "84후120",
+    "caseNo": "84후120"
+  },
+  "jdgmn": "본건 상표 \"Samsu\" 와 인용상표 \"Samsonite\"의 유사여부",
+  "jdgmnInfo": [
+    {
+      "question": "본건 상표 \"Samsu\"와 인용상표 \"Samsonite\"가 유사한가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "이 사건 상표인 \"Samsu\" 와 인용상표인 반달모양의 심볼도형밑에 횡서한 \"Samsonite\"는 그 칭호, 외관, 관념의 3가지 면에서 각 대비하여 보아도 그 어느 부분이라도 오인, 혼동을 일으킬 정도의 유사성은 발견되지 아니하며 \"Samsonite\"의 어미 \"nite\"는 Samsonite를 \"Samsu\" 와는 다른 상표로 구별짓게 하는 충분한 기능이 있어 위 양상표는 동일 유사하다고 볼 수 없다.",
+      "summ_pass": "\" Samsonite\"의 어미 \"nite\"는 Samsonite를 \"Samsu\" 와는 다른 상표로 구별짓게 하는 충분한 기능이 있어 위 양상표는 동일 유사하다고 볼 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "상표등록무효"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조, 제46조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "상표등록무효"
+  }
+}

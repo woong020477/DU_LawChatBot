@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 56199973,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1982. 7. 27., 선고, 82후10, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1982-07-27",
+    "caseNoID": "82후10",
+    "caseNo": "82후10"
+  },
+  "jdgmn": "상표 \"CROWN RUSSE\" 와 \"CROWN\"의 유사성",
+  "jdgmnInfo": [
+    {
+      "question": "상표 \"CROWN RUSSE\"와 \"CROWN\"의 유사성이 인정됨이 적법한가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "출원상표 \"CROWN RUSSE\" 와 등록상표 \"CROWN\"의 두 상표는 외관상으로는 유사할 수 없다 할 것이나 그 호칭에 있어서는 출원상표 \"CROWN RUSSE\"는 등록상표의 요부인 \"CROWN\" 을 직감케 하거나 연상케 될 것이고 위 출원상표는 등록상표의 문자인 CROWN 에 RUSSE 라는 문자를 결합한 것이지만 우리의 언어감각으로 보아 그 결합으로 인하여 CROWN 이 가지는 관념과는 다른 새로운 관념이 형성되는 것이라고도 볼 수 없으므로 위 두 상표는 칭호 및 관념이 유사하다고 하지 않을 수 없다.",
+      "summ_pass": "출원상표는 등록상표의 문자인 CROWN 에 RUSSE 라는 문자를 결합한 것이지만 우리의 언어감각으로 보아 그 결합으로 인하여 CROWN 이 가지는 관념과는 다른 새로운 관념이 형성되는 것이라고도 볼 수 없으므로 위 두 상표는 칭호 및 관념이 유사하다고 하지 않을 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "외관 및 호칭"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

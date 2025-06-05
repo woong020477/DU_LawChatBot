@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 52376610,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1989. 11. 24., 선고, 89후964, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1989-11-24",
+    "caseNoID": "89후964",
+    "caseNo": "89후964"
+  },
+  "jdgmn": "출원상표 'GREENPEACE'와 인용상표 'PEACE'와 유사여부(적극)",
+  "jdgmnInfo": [
+    {
+      "question": "출원상표 'GREENPEACE'와 인용상표 'PEACE'가 유사한가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "출원상표 \"GREEN PEACE\"와 인용상표 \"PEACE\"는 외관상 서로 다르지만 그 호칭에 있어서는 일반적으로 GREEN이 평화로움을 나타내는 색상으로 인식되는 것을 고려하면 출원상표의 주된 관념도 PEACE에 있다고 할 것이어서 인용상표인 \"PEACE\" 또는 평화와 유사한 것이 되므로 양상표의 호칭에 오인, 혼동을 일으킬 염려가 있다.",
+      "summ_pass": "일반적으로 GREEN이 평화로움을 나타내는 색상으로 인식되는 것을 고려하면 출원상표의 주된 관념도 PEACE에 있다고 할 것이어서 인용상표인 \"PEACE\" 또는 평화와 유사한 것이 되므로 양상표의 호칭에 오인, 혼동을 일으킬 염려가 있다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조 제1항 제7호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

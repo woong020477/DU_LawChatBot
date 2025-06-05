@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 50595844,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1985. 12. 24., 선고, 85후116, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1985-12-24",
+    "caseNoID": "85후116",
+    "caseNo": "85후116"
+  },
+  "jdgmn": "출원상표 \"FOXY FASHION\"과 인용상표 \"FOXY\"의 유사여부",
+  "jdgmnInfo": [
+    {
+      "question": "출원상표 \"FOXY FASHION\"과 인용상표 \"FOXY\"가 유사한가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "상품구분 제45류의 작업복, 양복바지, 아동복 등을 지정상품으로 한 흑색 사각형내에 \"FOXY FASHION\"이라는 영문자를 도형화 한 출원상표 중 \"FASHION\"은 지정상품과 관련하여 볼 때 보통 명칭에 불과하여 특별현저성이 결여된 것이니, 그 요부는 \"FOXY\"라는 부분에 있다 할 것이고, 이는 인용상표의 \"FOXY\"와 비교하면 그 칭호, 관념이 동일하여 일반 수요자로 하여금 상품출처의 오인, 혼동을 초래케 할 우려가 있어 출원상표는\n상표법 제9조 제1항 제7호의 불등록사유에 해당한다.",
+      "summ_pass": "이는 인용상표의 \"FOXY\"와 비교하면 그 칭호, 관념이 동일하여 일반 수요자로 하여금 상품출처의 오인, 혼동을 초래케 할 우려가 있어 출원상표는\n상표법 제9조 제1항 제7호의 불등록사유에 해당한다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조 제1항 제7호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

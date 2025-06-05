@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 53056373,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1983. 7. 12., 선고, 82후42, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1983-07-12",
+    "caseNoID": "82후42",
+    "caseNo": "82후42"
+  },
+  "jdgmn": "상표 \\\" BAL A VERSAILLES\\\" 가 지리적 명칭만으로 표시된 표장인지 여부(적극)",
+  "jdgmnInfo": [
+    {
+      "question": "상표 \"BAL A VERSAILLES\"가 지리적 명칭만으로 표시된 표장인가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "본원상표 \"BAL A VERSAILLES\"를 전체적으로 판단할 때 \"VERSAILLES\" 가 두드러지게 보일 뿐 아니라 불란서어인 \"BAL\" 이 무도회라는 뜻이 있다 하더라도 부가적인 표시인 \"BAL A\"는 우리나라 거래사회의 실정으로 보아 수요자가 그 뜻을 알아 볼 수 없는 표장이라 인정되며 따라서 본원상표는 수요자간에 지리적 명칭인 \"VERSAILLES\"로 인식되는 지리적 명칭만으로 표시된 표장에 해당되어 등록받을 수 없다.",
+      "summ_pass": "따라서 본원상표는 수요자간에 지리적 명칭인 \"VERSAILLES\"로 인식되는 지리적 명칭만으로 표시된 표장에 해당되어 등록받을 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거래 사회의 실정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제8조 제1항 제4호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

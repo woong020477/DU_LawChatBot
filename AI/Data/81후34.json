@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 57195844,
+    "dataType": "판결문",
+    "caseNm": "상표등록무효",
+    "caseTitle": "대법원 1983. 6. 28., 선고, 81후34, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1983-06-28",
+    "caseNoID": "81후34",
+    "caseNo": "81후34"
+  },
+  "jdgmn": "학생복, 유니폼, 샤쓰등의 지정상품에 대한 상표로서의 \"RIPPLE\" \"의 특별현저성 유무(소극)",
+  "jdgmnInfo": [
+    {
+      "question": "학생복, 유니폼, 샤쓰등의 지정상품에 대한 상표로서의 \"RIPPLE\"의 특별현저성이 있는가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "본건 등록상표인 \"RIPPLE\" 이라는 단어가 물결모양을 뜻하고 있고 본상표의 출원전부터 섬유업계에서는 \"Ripple Finish\", \"Ripple Design\", \"Ripple Cloth\" 가 섬유기술용어로 통용되어 왔고 이러한 \"Ripple Finish\" 등이 \"Ripple\"로 약칭될 수도 있으므로 섬유업계에서는 물론 피복의 일부 수요자들까지도 본건 등록상표를 \"RIPPLE\" 이라고 호칭하면 그 지정상품인 학생복, 유니폼, 샤쓰등이 물결모양의 무늬를 가공한 지정상품의 품질을 표시내지는 암시하는 \"Ripple Finish\" 등의 관념을 낳게 되므로 본건 등록상표 \"RIPPLE\" 은 자타상품을 식별할 수 있는 특별현저성이 있다고 볼 수 없다.",
+      "summ_pass": "섬유업계에서는 물론 피복의 일부 수요자들까지도 본건 등록상표를 \"RIPPLE\" 이라고 호칭하면 그 지정상품인 학생복, 유니폼, 샤쓰등이 물결모양의 무늬를 가공한 지정상품의 품질을 표시내지는 암시하는 \"Ripple Finish\" 등의 관념을 낳게 되므로 본건 등록상표 \"RIPPLE\" 은 자타상품을 식별할 수 있는 특별현저성이 있다고 볼 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "상표법 제8조 제1항"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제8조 제1항",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "상표등록무효"
+  }
+}

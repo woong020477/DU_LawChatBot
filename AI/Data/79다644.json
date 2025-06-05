@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 51903412,
+    "dataType": "판결문",
+    "caseNm": "손해배상",
+    "caseTitle": "대법원 1979. 7. 10., 선고, 79다644, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1979-07-10",
+    "caseNoID": "79다644",
+    "caseNo": "79다644"
+  },
+  "jdgmn": "동업자가 동시에 그 사용자가 될 수 있는지의 여부",
+  "jdgmnInfo": [
+    {
+      "question": "동업자가 동시에 그 사용자가 될 수 있는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "피고는 자금을 제공하고 원심공동피고 박용주는 현장감독 책임을 지기로 하여 이 사건 비무장 공동경계구역내의 사계청소작업을 동업하므로 피고는 위 박용주와 동업자인 동시에 그 사용자의 지위에 있었다 할 것이다.",
+      "summ_pass": "동업자인 동시에 그 사용자의 지위에 있었다 할 것이다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "손해배상"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "민법 제756조 제1항",
+    "reference_court_case": "대법원 1961.10.26. 선고 4293민상288 판결"
+  },
+  "Class_info": {
+    "class_name": "민사",
+    "instance_name": "손해배상"
+  }
+}

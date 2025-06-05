@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 38020455,
+    "dataType": "판결문",
+    "caseNm": "의료급여비용감액조정처분취소청구",
+    "caseTitle": "국민권익위원회 2003-03911, 2003. 6. 23.",
+    "courtType": "심결례",
+    "courtNm": "국민권익위원회",
+    "judmnAdjuDe": "2003-06-23",
+    "caseNoID": "2003-03911",
+    "caseNo": "2003-03911"
+  },
+  "jdgmn": "",
+  "jdgmnInfo": [
+    {
+      "question": "수술을 통상적으로 cage 1개만으로는 균등한 안정성을 유지하기 어려우며, 또한 X-ray 필름을 참조할 때 자가골이식만으로도 충분하므로 위 척추고정재료대 cage를 인정하기 어렵고, 달리 그 심사나 결정에 잘못이 있다고 인정되지 않은 경우, 청구인에 대하여 의료급여비용을 감액조정한 이 건 처분이 위법·부당하다고 할 수 있는가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "진료심사평가위원회에서 1997. 12. 17.자로 결정한 HIVD & Spinal Stenosis L5-S1 상병에 CH Cage를 이용한 수술의 인정기준에 의하면, HIVD L5-S1 상병으로 Laminectomy & Discectomy L5-S1 실시후 척추의 안정성을 위해 CH Cage 1개를 이용하여 후방고정술을 실시한 동건은, 통상적으로 Cage 1개만으로는 균등한 Stabilization을 유지하기 어려울 뿐 아니라 동건의 X- RAY Film 참조할 때 자가골이식만으로도 충분하다고 판단되므로 CH Cage는 인정하지 아니한 것으로 되어 있다.",
+      "summ_pass": "진료심사평가위원회에서 결정한 인정기준에 의하면, HIVD L5-S1 상병으로 Laminectomy & Discectomy L5-S1 실시후 척추의 안정성을 위해 CH Cage 1개를 이용하여 후방고정술을 실시한 동건은, 통상적으로 Cage 1개만으로는 균등한 Stabilization을 유지하기 어려울 뿐 아니라 동건의 X- RAY Film 참조할 때 자가골이식만으로도 충분하다고 판단되므로 CH Cage는 인정하지 아니한 것으로 되어 있다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "진료심사평가위원회"
+    },
+    {
+      "id": 2,
+      "keyword": "수술의 인정기준"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "의료급여법(2002. 12. 5. 법률 제6758호 개정되기 전의 것) 제11조, 제30조, 제33조 의료급여법시행령 제17조, 제20조 의료급여법시행규칙 제6조, 제21조 국민건강보험요양급여의기준에관한규칙 제5조, 별표 1",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "행정",
+    "instance_name": "의료법위반"
+  }
+}

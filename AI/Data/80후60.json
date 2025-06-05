@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 56635138,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1981. 9. 22., 선고, 80후60, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1981-09-22",
+    "caseNoID": "80후60",
+    "caseNo": "80후60"
+  },
+  "jdgmn": "\"SUNREX 선렉스\"와 \"SUNFLEX\"가 유사상표인지의 여부(적극)",
+  "jdgmnInfo": [
+    {
+      "question": "SUNREX 선렉스와 \"SUNFLEX\"가 유사상표인가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "출원상표인 \"SUNREX 선렉스\"는 선출원의 등록상표인 \"SUNFLEX\" 와 그 칭호에 있어 유사하여 동종품인 지정상품에 사용될 경우 상품출처의 오인 혼동을 일으킬 우려가 있으므로 등록할 수 없다.",
+      "summ_pass": "그 칭호에 있어 유사하여 동종품인 지정상품에 사용될 경우 상품출처의 오인 혼동을 일으킬 우려가 있으므로 등록할 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제9조 제1항 제7호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}

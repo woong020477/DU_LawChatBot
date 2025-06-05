@@ -1,0 +1,48 @@
+{
+  "info": {
+    "id": 41007424,
+    "dataType": "판결문",
+    "caseNm": "강간치상, 보호감호",
+    "caseTitle": "대법원 1986. 6. 24. 선고 86도859 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1986-06-24",
+    "caseNoID": "86도859",
+    "caseNo": "86도859"
+  },
+  "jdgmn": "상해, 폭행, 공갈죄 및 강간죄와 강간치상죄가 사회보호법 소정의 동종 또는 유사한 죄인지 여부",
+  "jdgmnInfo": [
+    {
+      "question": "상해, 폭행, 공갈죄 및 강간죄와 강간치상죄가 사회보호법 소정의 동종 또는 유사한 죄인가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "폭력에 의한 상해, 폭행, 공갈행위 및 강간행위와 강간치상죄와는 폭력을 행사하여 피해자에게 공격적 태도를 표명함으로써 이루어지는 행위라는 점에서 그 죄질, 범죄의 수단, 방법등이 유사하다.",
+      "summ_pass": "상해, 폭행, 공갈죄 및 강간죄와 강간치상죄는 유사한 죄이다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "상해"
+    },
+    {
+      "id": 2,
+      "keyword": "공갈"
+    },
+    {
+      "id": 3,
+      "keyword": "강간"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "사회보호법 제6조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "형사B(일반형)",
+    "instance_name": "강간"
+  }
+}

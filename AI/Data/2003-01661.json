@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 38020527,
+    "dataType": "판결문",
+    "caseNm": "의료급여비용감액조정처분취소청구",
+    "caseTitle": "국민권익위원회 2003-01661, 2003. 7. 21.",
+    "courtType": "심결례",
+    "courtNm": "국민권익위원회",
+    "judmnAdjuDe": "2003-07-21",
+    "caseNoID": "2003-01661",
+    "caseNo": "2003-01661"
+  },
+  "jdgmn": "",
+  "jdgmnInfo": [
+    {
+      "question": "척추관 협착의 정도가 광범위한 감압술이 반드시 필요한 정도로 보여지지 않고, 제2-3 요추간에 시술한 후측면양수체유합술은 뚜렷한 불안정성 또는 이를 초래할 정도의 광범위한 감압술이 필요한 병소가 확인되지 않은 경우, 환자에게 사용한 Screw Set 6개와 Rod 2개 및 박○○에 사용한 Screw Set 4개와 Rod 2개는 위 심사사례 등 관련규정에 위배되는가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "○○위원회에서 1997. 1. 29.자로 결정한 심사례에 의하면, \"동건은 Spinal stenosis L3-S1, spondylolisthesis L3-5 상병으로 척추강협착증수술과 L3-S1 부위에는 Diapason apinal fixation device와 L4-5, L5-S1 부위에는 carbon cage를 병용하여 척추정복고정술을 시행한 경우로, L-S spine판독소견, X-ray film 및 의사소견서 참조 L4-5에 사용된 Carbon cage는 X-ray상 심한 narrowing이 명확하게 확인되므로 인정함이 타당하고(L5-S1 부위에 사용한 Carbon cage는 미청구), S1 level의 Diapason lumbar screw×2ea 사용은 적정한 진료로 볼 수 없으므로 인정하지 아니함\"으로 되어 있다.",
+      "summ_pass": "L-S spine판독소견, X-ray film 및 의사소견서 참조 L4-5에 사용된 Carbon cage는 X-ray상 심한 narrowing이 명확하게 확인되므로 인정함이 타당하고, S1 level의 Diapason lumbar screw×2ea 사용은 적정한 진료로 볼 수 없으므로 인정하지 아니한다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "척추강협착증수술"
+    },
+    {
+      "id": 2,
+      "keyword": "척추정복고정술"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "의료급여법 제11조, 제30조, 제33조 의료급여법시행령 제20조제1항 의료급여법시행규칙 제6조, 제20조 국민건강보험법 제56조, 제59조 국민건강보험요양급여기준에관한규칙 별표 1",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "행정",
+    "instance_name": "의료법위반"
+  }
+}

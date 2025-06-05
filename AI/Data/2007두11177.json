@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 41026027,
+    "dataType": "판결문",
+    "caseNm": "전재제한처분무효확인",
+    "caseTitle": "대법원 2007. 12. 27. 선고 2007두11177 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "2007-12-27",
+    "caseNoID": "2007두11177",
+    "caseNo": "2007두11177"
+  },
+  "jdgmn": "[1] ‘남극해양생물자원 보존에 관한 협약’의 체약국인 우리나라에 입항한 어획물 운반선이 위 협약과 그에 따른 남극해양생물자원 보존위원회의 보존조치에 의한 전재(轉載) 제한조치의 적용대상인지 여부(적극)\n[2] 환적을 위하여 ‘남극해양생물자원 보존에 관한 협약’의 체약국인 우리나라 부산항에 입항한 이빨고기 운반선에 대하여 그 선적된 어획물인 이빨고기의 전재(轉載)를 제한한 처분은 위 협약과 남극해양생물자원 보존위원회의 보존조치의 규정에 따라 적법하다고 한 사례",
+  "jdgmnInfo": [
+    {
+      "question": "‘남극해양생물자원 보존에 관한 협약’의 체약국인 우리나라에 입항한 어획물 운반선이 위 협약과 그에 따른 남극해양생물자원 보존위원회의 보존조치에 의한 전재(轉載) 제한조치의 적용대상인가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "[1] 1980. 5. 20. 체결된 ‘남극해양생물자원 보존에 관한 협약(Convention on the Conservation of Antarctic Marine Living Resources)’과 관련하여, 우리나라가 1985. 3. 29. 가입서를 기탁한 후, 1985. 4. 28. 조약 제860호로 위 협약이 발효되어 우리나라 영토 전체에 그 효력이 미치는 이상, 우리나라 항구에 입항한 어획물 운반선은 그 기국(旗國) 및 어획물 조업선의 기국이 위 협약의 체약국인지 여부와 관계없이, 위 협약 및 그에 따른 남극해양생물자원 보존위원회(Commission for the Conservation of Antarctic Marine Living Resources)의 보존조치(Conservation Measures)에 의한 검색과 양륙 및 전재(轉載) 제한조치의 적용대상이 된다. [2] 환적을 위하여 ‘남극해양생물자원 보존에 관한 협약(Convention on the Conservation of Antarctic Marine Living Resources)’의 체약국인 우리나라의 부산항에 입항한 이빨고기 운반선이, 위 협약이 적용되는 수역에서 조업하는 것이 목격된 불법·비보고 및 비규제 선박목록(Illegal, Unreported and Unregulated Vessel List)에 등록된 비체약국의 조업선으로부터 이빨고기를 전재(轉載)한 ‘전재에 참여한 비체약국 선박’에 해당한다고 보아, 남극해양생물자원 보존위원회(Commission for the Conservation of Antarctic Marine Living Resources)의 보존조치(Conservation Measures)를 위반하였다는 이유로 그 선적된 어획물인 이빨고기의 전재를 제한한 처분은 위 협약과 남극해양생물자원 보존위원회의 보존조치의 규정에 따라 적법하다.",
+      "summ_pass": "‘남극해양생물자원 보존에 관한 협약’의 체약국인 우리나라에 입항한 어획물 운반선이 위 협약과 그에 따른 남극해양생물자원 보존위원회의 보존조치에 의한 전재(轉載) 제한조치의 적용대상이다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "체약국"
+    },
+    {
+      "id": 2,
+      "keyword": "위원회"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "[1] 남극해양생물자원 보존에 관한 협약 제2조, 제7조, 제9조, 제21조 [2] 남극해양생물자원 보존에 관한 협약 제2조, 제7조, 제9조, 제21조",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "행정",
+    "instance_name": "행정처분취소"
+  }
+}

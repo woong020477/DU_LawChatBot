@@ -1,0 +1,44 @@
+{
+  "info": {
+    "id": 42057001,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1994. 10. 14. 선고 94후814 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1994-10-14",
+    "caseNoID": "94후814",
+    "caseNo": "94후814"
+  },
+  "jdgmn": "상표 “INSTANT-FORTE”와 “INSTANT CONDITION”의 유사 여부",
+  "jdgmnInfo": [
+    {
+      "question": "본원상표 “INSTANT-FORTE”와 선등록된 “INSTANT CONDITION”이 외관상 다르나, 두 상표 모두 \"INSTANT\"로 인식될 수 있다면 유사한 상표인가?",
+      "answer": "긍정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "본원상표 “INSTANT-FORTE”와 선등록 인용상표 “INSTANT CONDITION”을 대비하여 보면, 두 상표가 그 외관은 상이하나 양 상표는 이를 구성하는 두 단어가 외관상 구분되어 있고 이들이 결합하여 전혀 새로운 관념을 도출할 수 있는 것도 아니어서 각 부분을 분리하여 관찰하면 거래상 자연스럽지 못하다고 여겨질 정도로 불가분적으로 결합되어 있다고 볼 수 없을 뿐 아니라 간략한 칭호나 관념에 의하여 상표를 기억하려는 일반수요자의 경향에 따라 양 상표모두 앞부분의 “INSTANT”만으로 인식되어 약칭되기 쉽다 할 것이고 그 경우 양 상표는 칭호 및 관념이 동일하여 다같이 동일 또는 유사한 지정상품에 사용할 경우 일반수요자나 거래자로 하여금 상품의 출처에 관하여 오인·혼동을 일으키게 할 염려가 있는 유사한 상표이다.",
+      "summ_pass": "본원상표 “INSTANT-FORTE”와 선등록된 “INSTANT CONDITION”은 외관상 다르지만, 두 상표 모두 \"INSTANT\"로 인식될 수 있어 일반 수요자나 거래자가 상품의 출처를 오인하거나 혼동할 수 있는 유사한 상표로 볼 수 있다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "인용상표"
+    },
+    {
+      "id": 2,
+      "keyword": "유사한 상표"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제7조 제1항 제7호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "특허 거절"
+  }
+}

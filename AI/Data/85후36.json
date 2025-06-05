@@ -1,0 +1,40 @@
+{
+  "info": {
+    "id": 58271812,
+    "dataType": "판결문",
+    "caseNm": "거절사정",
+    "caseTitle": "대법원 1986. 6. 24., 선고, 85후36, 판결",
+    "courtType": "판례(대법원)",
+    "courtNm": "대법원",
+    "judmnAdjuDe": "1986-06-24",
+    "caseNoID": "85후36",
+    "caseNo": "85후36"
+  },
+  "jdgmn": "상표 \"MICOM\"의 등록가부",
+  "jdgmnInfo": [
+    {
+      "question": "상표 \"MICOM\"의 등록이 가능한가?",
+      "answer": "부정"
+    }
+  ],
+  "Summary": [
+    {
+      "summ_contxt": "상표 “MICOM”은 “Microcomputer”의 약칭으로 관련잡지, 신문등에서 인식 사용되고 있는 것은 현저한 사실이며 따라서 지정상품과의 관계에서 볼 때 Computer화된 각종 제어기나 장치로 인식될 수 있으므로 이것은 품질을 오인시키거나 소비자를 기만할 염려가 있는 경우에 해당하여상표법 제8조 제1항 제2호및제9조 제1항 제11호에 의하여 등록받을 수 없다.",
+      "summ_pass": "따라서 지정상품과의 관계에서 볼 때 Computer화된 각종 제어기나 장치로 인식될 수 있으므로 이것은 품질을 오인시키거나 소비자를 기만할 염려가 있는 경우에 해당하여상표법 제8조 제1항 제2호및제9조 제1항 제11호에 의하여 등록받을 수 없다."
+    }
+  ],
+  "keyword_tagg": [
+    {
+      "id": 1,
+      "keyword": "거절사정"
+    }
+  ],
+  "Reference_info": {
+    "reference_rules": "상표법 제8조 제1항 제2호, 제9조 제1항 제11호",
+    "reference_court_case": ""
+  },
+  "Class_info": {
+    "class_name": "특허/저작권",
+    "instance_name": "거절사정"
+  }
+}
