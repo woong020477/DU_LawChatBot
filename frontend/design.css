@@ -225,6 +225,29 @@ body.dark .right-panel {
   cursor: pointer;
 }
 
+/* 모달 스타일 */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.modal-box {
+  background: white;
+  padding: 24px;
+  max-width: 80vw;
+  max-height: 80vh;
+  overflow: auto;
+  border-radius: 12px;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+
 /* 데스크탑 전용: 메뉴 확장 시 채팅 영역 밀기 */
 @media (min-width: 1081px) {
   .menubar.visible ~ .chat-area {
@@ -233,6 +256,28 @@ body.dark .right-panel {
 
   .menubar ~ .chat-area {
     margin-left: 80px;
+  }
+  
+  .container {
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  .chat-area {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+  }
+
+  .chat-log {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  .right-panel {
+    height: 100vh;
+    overflow-y: auto;
   }
 }
 
