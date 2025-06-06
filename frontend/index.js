@@ -82,20 +82,26 @@ document.addEventListener('DOMContentLoaded', () => {
             })
               .then(res => res.json())  // JSON으로 응답 파싱
               .then(result => {
-                const items = result?.PrecSearch?.prec; // 판례 목록 추출
-                if (!items || !items.length) return;  // 판례가 없을경우 null 반환
-                items.forEach(item => { // 유사한 판례 양식
+                const items = result?.prec;
+                if (!items || !items.length) return;
+
+                items.forEach(item => {
                   const card = document.createElement('div');
                   card.className = 'case-card';
+
+                  const detailButton = document.createElement('button');
+                  detailButton.textContent = '자세히 보기';
+                  detailButton.onclick = () => showModal(item.전체내용); // 모달로 전체 JSON 표시
+
                   card.innerHTML = `
                     <strong>${item.사건명}</strong><br>
-                    <span>${item.판결유형 || '판결 유형 없음'} / ${item.선고일자}</span><br>
-                    <a href="${item.상세링크}" target="_blank">자세히 보기</a>
+                    <span>판결유형: ${item.판결유형} / 선고일자: ${item.선고일자}</span><br>
                   `;
+                  card.appendChild(detailButton);
                   casePanel.appendChild(card);
                 });
               })
-              .catch(err => console.error("판례 검색 실패:", err)); // 판례 API 오류 발생 시 출력
+              .catch(err => console.error("판례 검색 실패:", err)); // 판례 오류 발생 시 출력
           }
           break;
         
@@ -132,6 +138,19 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     messageInput.value = '';
+  }
+
+  function showModal(data) {
+    const modalOverlay = document.createElement('div');
+    modalOverlay.className = 'modal-overlay';
+
+    const modalBox = document.createElement('div');
+    modalBox.className = 'modal-box';
+    modalBox.innerText = JSON.stringify(data, null, 2);
+
+    modalOverlay.onclick = () => document.body.removeChild(modalOverlay);
+    modalOverlay.appendChild(modalBox);
+    document.body.appendChild(modalOverlay);
   }
 
   // 전송 버튼 클릭 or Enter 키 클릭 시 메시지 전송
