@@ -30,7 +30,9 @@ app.post('/sendMessage', async (req, res) => {
     당신은 대한민국 법률 상담 AI입니다.
 
     다음 사용자 질문을 분석하여, 아래 3가지 중 정확히 하나의 JSON 형식으로 출력하십시오:
-
+    (1) 법률적 조언 (answer)
+    (2) 관련 키워드 3~5개 (keywords)
+    (3) 유사 판례 검색에 적합한 문장형 쿼리 (query)
     ---
 
     1. 질문이 구체적이며, 법률적 판단이 '통상적으로 가능'한 수준인 경우:
@@ -44,11 +46,15 @@ app.post('/sendMessage', async (req, res) => {
       - 가능한 대안 조치를 제안
     - 마지막 줄에 반드시 다음 문장을 추가하십시오:  
       "이와 유사한 상황의 판례입니다."
-    - 핵심 키워드 1개를 추출하여 'keywords'에 포함 (문장이 아닌 단어, 쉼표 없이)
+    - 사용자의 질문에서 법률적 판단에 중요한 단어(예: 죄명, 행위, 피해유형 등)를 뽑아 "keywords"에 포함하십시오.
+    - 각 키워드는 검색 가능성이 높은 **2~4글자 중심의 명사**를 우선 추출하십시오. (예: "사기", "주거침입", "폭행", "재산분할")
+    - 'query'는 사용자 질문을 1문장으로 요약한 것으로, UI 표기용이므로 반드시 자연어 문장으로 작성하십시오.
+    - 'keywords'는 '"폭행"', '"모욕"', '"증거사진"' 등 개별 단어로, 쉼표 없이 배열 형태로 출력하십시오.
     {
       "status": "complete",
-      "answer": "자세한 법률 조언 ... 마지막 줄: 이와 유사한 상황의 판례입니다.",
-      "keywords": "한글키워드1",
+      "answer": "자세한 법률 조언을 해주십시오. 위 설명 내용 전체가 여기에 포함되어야 합니다.",
+      "keywords": ["핵심키워드1", "핵심키워드2"], // 핵심적인 키워드는 1~3개까지 배열 형태로 작성하십시오.
+      "query": "판례 검색을 위한 한국어 자연어 검색문장"
     }
 
     2. 질문이 법률적 가능성이 있으나 정보가 부족하거나 모호한 경우:
@@ -58,7 +64,7 @@ app.post('/sendMessage', async (req, res) => {
 
     {
       "status": "incomplete",
-      "followUp": "당시 상황에 대한 시간, 장소, 대화 내용 중 두 가지 이상을 설명해 주세요."
+      "followUp": "정확한 판단을 위해, 가능한 한 육하원칙(언제, 어디서, 누가, 무엇을, 어떻게, 왜)에 따라 설명해 주세요. 특히 어떤 행동이 있었고, 이를 입증할 수 있는 증거가 있다면 꼭 알려주세요."
     }
 
     3. 질문이 명백히 법률과 무관한 경우 (예: 날씨, 음식, 게임, 연애, 감정 토로 등 단순 대화):
@@ -78,21 +84,23 @@ app.post('/sendMessage', async (req, res) => {
     출력:
     {
       "status": "complete",
-      "answer": "상대방이 먼저 욕설을 하고 시비를 건 경우, 모욕죄나 경범죄처벌법 위반으로 고소할 수 있습니다... 이와 유사한 상황의 판례입니다.",
-      "keywords": "모욕",
+      "answer": "상대방이 먼저 욕설을 하고 시비를 건 경우, 모욕죄나 경범죄처벌법 위반으로 고소할 수 있습니다. 다만, 쌍방 간 모욕 또는 폭행이 있었다면 귀하 역시 처벌 대상이 될 수 있으므로 신중한 대응이 필요합니다. 당시 상황에 대한 증거(영상, 목격자 진술 등)를 확보해두는 것이 좋습니다. 변호사와 상담 시 사건의 시간, 장소, 상대방 언행 등을 구체적으로 정리해 두십시오.,
+      "keywords": ["모욕", "폭행"],
+      "query": "술집에서 모욕을 당했을 때 고소 가능 여부"
     }
 
     [예시 2]
     질문: 친구한테 돈 빌려줬는데 계속 안 갚아요. 고소할 수 있나요?
     {
       "status": "incomplete",
-      "followUp": "정확한 판단을 위해 언제, 어떤 방식으로 돈을 빌려줬는지 알려주세요."
+      "followUp": "정확한 판단을 위해, 가능한 한 육하원칙(언제, 어디서, 누가, 무엇을, 어떻게, 왜)에 따라 설명해 주세요. 특히 어떤 행동이 있었고, 이를 입증할 수 있는 증거가 있다면 꼭 알려주세요."
     }
     사용자가 followUp에 응답: 올해 2월 초에 계좌이체로 300만 원 보냈고, 문자로 6개월 안에 갚겠다고 했어요.
     {
       "status": "complete",
       "answer": "계좌이체 내역과 문자 메시지를 통해 '금전 소비대차' 계약이 있었다는 점을 입증할 수 있습니다. 변제기(6개월 기한)가 지나도록 변제가 이루어지지 않았다면 민사소송을 통해 청구가 가능합니다. 문자 메시지는 증거로 활용할 수 있으며, 계좌이체 내역도 입증 자료가 됩니다. 변호사와 상담 시, 송금 내역과 대화 내용을 출력해 준비하시기 바랍니다. 이와 유사한 상황의 판례입니다.",
-      "keywords": "채권",
+      "keywords": ["채권", "금전소비대차"],
+      "query": "채무자가 돈을 갚지 않을 때 소송 가능한지 여부"
     }
 
     [예시 3]
@@ -101,7 +109,8 @@ app.post('/sendMessage', async (req, res) => {
     {
       "status": "complete",
       "answer": "정당한 이유 없는 해고는 근로기준법 제23조에 따라 부당해고에 해당할 수 있습니다. 근로자는 해고일로부터 3개월 이내에 노동위원회에 부당해고 구제신청을 할 수 있으며, 사용자가 해고의 정당성을 입증해야 합니다. 근로계약서, 급여지급 내역, 해고 통보 시점 등을 정리하여 준비하십시오. 이와 유사한 상황의 판례입니다.",
-      "keywords": "부당해고",
+      "keywords": ["부당해고", "근로자"],
+      "query": "정당한 이유 없이 해고당한 경우 부당해고로 소송 가능한지 여부"
     }
     
     [예시 4]
@@ -145,51 +154,53 @@ app.post('/sendMessage', async (req, res) => {
 
 /* 클라이언트에서 판례 검색 요청을 받아 법제처 API에 요청하고 결과를 반환하는 엔드포인트 */
 app.post('/getLawCases', async (req, res) => {
-  const { query } = req.body;                                     // 클라이언트에서 전달한 검색어 추출
-  const OC = process.env.LAW_API_OC;                              // .env에 저장된 사용자 인증 OC 값 사용
+  const { keywords, query, label } = req.body;
+  const OC = process.env.LAW_API_OC;
 
-  const url = `https://www.law.go.kr/DRF/lawSearch.do?OC=${OC}&target=prec&type=JSON&query=${encodeURIComponent(query)}&display=5`;
+  // 유효성 검사
+  if (!Array.isArray(keywords) || keywords.length === 0 || !query) {
+    return res.status(400).json({ error: '검색 키워드 또는 쿼리가 없습니다.' });
+  }
 
-  console.log("법령 API 요청 URL:", url);                        // 실제 요청 URL 로그 출력
+  const encodedQuery = encodeURIComponent(query);
+  const url = `https://www.law.go.kr/DRF/lawSearch.do?OC=${OC}&target=prec&type=JSON&search=2&query=${encodedQuery}&display=5`;
+
+  console.log(`[${label}] 요청 URL:`, url);
 
   try {
     const apiResponse = await fetch(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0'                               // 브라우저처럼 보이도록 헤더 추가
-      }
+      headers: { 'User-Agent': 'Mozilla/5.0' }
     });
 
-    const text = await apiResponse.text();                        // 응답을 텍스트 형태로 받음
+    const text = await apiResponse.text();
 
     if (text.startsWith('<')) {
-      console.error("JSON이 아닌 HTML 응답을 받았습니다");       // HTML 응답일 경우 에러 로그 출력
-      console.error(text.slice(0, 300));                          // 응답 앞부분 확인
-      return res.status(500).json({ error: '법령 API에서 JSON이 아닌 HTML을 반환했습니다' });
+      console.error(`[${label}] HTML 응답 수신 (JSON 아님)`);
+      return res.status(500).json({ error: '법령 API에서 JSON이 아닌 HTML을 반환했습니다.' });
     }
 
-    const result = JSON.parse(text);                              // 텍스트를 JSON으로 파싱
+    const json = JSON.parse(text);
+    const items = json?.PrecSearch?.prec;
 
-    const items = result?.PrecSearch?.prec;                       // 판례 배열 추출
-    if (!items || items.length === 0) {
-      return res.json({ PrecSearch: { prec: [] } });              // 결과가 없을 경우 빈 배열 반환
+    if (!items || (Array.isArray(items) && items.length === 0)) {
+      console.log(`[${label}] 검색 결과 없음`);
+      return res.json({ PrecSearch: { prec: [] } });
     }
 
-    const OC = process.env.LAW_API_OC;
+    const normalizedItems = Array.isArray(items) ? items : [items];
 
-    const enhancedItems = Array.isArray(items) ? items : [items];  // 단일 객체일 경우 배열로 변환
-
-    // 각 판례에 상세 링크 추가
-    const processed = enhancedItems.map(item => ({
+    const processed = normalizedItems.map(item => ({
       ...item,
       상세링크: `http://www.law.go.kr/DRF/lawService.do?OC=${OC}&target=prec&ID=${item.판례일련번호}&type=HTML`
     }));
 
-    res.json({ PrecSearch: { prec: processed } });                // 가공된 결과를 클라이언트에 응답
+    res.json({ PrecSearch: { prec: processed } });
   } catch (error) {
-    console.error('법령 API 호출 실패:', error);                  // 서버 콘솔에 에러 출력
-    res.status(500).json({ error: '판례 검색 중 오류 발생' });    // 클라이언트에 에러 응답
+    console.error(`[${label}] API 호출 실패:`, error);
+    res.status(500).json({ error: '판례 검색 중 오류 발생' });
   }
 });
+
 
 /* 서버 실행 시작 */
 app.listen(PORT, () => {

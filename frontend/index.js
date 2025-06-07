@@ -67,24 +67,42 @@ document.addEventListener('DOMContentLoaded', () => {
           chatLog.scrollTop = chatLog.scrollHeight; // 새로운 채팅이 오면 자동으로 스크롤 하단으로 이동
 
           // 판례 검색 실행
-          const rawKeywords = json.keywords;  // GPT 응답 JSON 파일 속 키워드를 rawKeywords에 저장
-          const keywordText = Array.isArray(rawKeywords)  
-            ? rawKeywords.join(' ')
-            : typeof rawKeywords === 'string'
-              ? rawKeywords
-              : '';
-          //server.js에 keywordText를 전달(POST)해 getLawCases메소드 수행
-          if (keywordText.trim()) {
+          const rawKeywords = json.keywords;
+          const keywords = Array.isArray(rawKeywords) ? rawKeywords : [rawKeywords];
+          const cleanedKeywords = keywords.map(k => k.replace(/["“”]/g, '').trim()).filter(Boolean);
+
+          const keyword1 = cleanedKeywords[0]; // 핵심 키워드
+          const keywordOR = cleanedKeywords.join(' OR ');
+          const keywordAND = cleanedKeywords.join(' AND ');
+
+          // 서버에 다양한 쿼리를 순서대로 요청
+          const queriesToTry = [
+            { label: 'keywordAND', query: keywordAND },
+            { label: 'keyword1', query: keyword1 },
+            { label: 'keywordOR', query: keywordOR }
+          ];
+
+          queriesToTry.forEach(({ label, query }) => {
+            if (!query) return;
             fetch('http://localhost:3000/getLawCases', {
               method: 'POST',
               headers: { 'Content-Type': 'application/json' },
-              body: JSON.stringify({ query: keywordText.trim() }) // 키워드 전송
+              body: JSON.stringify({ 
+                keywords: cleanedKeywords,
+                query: query,
+                label: label
+              })  // query는 제거
             })
-              .then(res => res.json())  // JSON으로 응답 파싱
+              .then(res => res.json())
               .then(result => {
-                const items = result?.PrecSearch?.prec; // 판례 목록 추출
-                if (!items || !items.length) return;  // 판례가 없을경우 null 반환
-                items.forEach(item => { // 유사한 판례 양식
+                const items = result?.PrecSearch?.prec;
+                if (!items || !items.length) return;
+
+                const header = document.createElement('h3');
+                header.textContent = `🔍 검색결과: ${query}`;
+                casePanel.appendChild(header);
+
+                items.slice(0, 2).forEach(item => {
                   const card = document.createElement('div');
                   card.className = 'case-card';
                   card.innerHTML = `
@@ -95,9 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
                   casePanel.appendChild(card);
                 });
               })
-              .catch(err => console.error("판례 검색 실패:", err)); // 판례 API 오류 발생 시 출력
-          }
-          break;
+              .catch(err => console.error(`[${label}] 판례 검색 실패:`, err));
+          }); break;
         
           // 법률적 상황이지만 질문이 모호할 경우 추가 질문을 요구하는 메시지 출력
         case 'incomplete':
