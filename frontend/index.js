@@ -56,7 +56,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
       switch (json.status) {  // GPT 응답 JSON 파일에서 status변수의 상태에 따라 대처
 
-        // 구체적인 법률적 상황이 입력된 경우 자세한 법률적 조언 및 유사한 판례 출력
+        // 구체적인 법률적 상황이 입력된 경우 자세한 법률적 조언, 법령 및 유사한 판례 출력
         case 'complete':
           previousMessage = ''; // 초기화
           const answer = (json.answer || '응답 없음').replace(/([.])\s+/g, '$1<br>'); // 응답이 없으면 기본 메시지 출력, 있으면 마침표 단위로 줄바꿈 처리
@@ -70,10 +70,51 @@ document.addEventListener('DOMContentLoaded', () => {
           const rawKeywords = json.keywords;
           const keywords = Array.isArray(rawKeywords) ? rawKeywords : [rawKeywords];
           const cleanedKeywords = keywords.map(k => k.replace(/["“”]/g, '').trim()).filter(Boolean);
-
+          
+          const lawname = (json.lawname || '').replace(/["“”]/g, '').trim();
           const keyword1 = cleanedKeywords[0]; // 핵심 키워드
           const keywordOR = cleanedKeywords.join(' OR ');
           const keywordAND = cleanedKeywords.join(' AND ');
+
+          // 📘 1. 관련 법령명 검색 (law)
+          if (lawname) {
+            console.log('[lawname] 관련 법령명 검색 시작:', lawname);
+            fetch('http://localhost:3000/getLawCases', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                keywords: [lawname],
+                query: lawname,
+                label: 'law',
+                target: 'law'
+              })
+            })
+              .then(res => res.json())
+              .then(result => {
+                const items = result?.result;
+                if (!items || !items.length) {
+                  console.warn(`[law] 검색 결과 없음 (lawname: ${lawname})`);
+                  return;
+                }
+
+                const header = document.createElement('h3');
+                header.textContent = `📘 관련 법령 (${lawname})`;
+                casePanel.appendChild(header);
+
+                items.slice(0, 1).forEach(item => {
+                  const card = document.createElement('div');
+                  card.className = 'case-card';
+                  card.innerHTML = `
+                    <strong>${item.법령명한글}</strong><br>
+                    <a href="${item.상세링크}" target="_blank">자세히 보기</a>
+                  `;
+                  casePanel.appendChild(card);
+                });
+              })
+              .catch(err => console.error('[law] 법령 검색 실패:', err));
+          } else {
+            console.log('[lawname] GPT 응답에 lawname이 없어 검색하지 않음');
+          }
 
           // 서버에 다양한 쿼리를 순서대로 요청
           const queriesToTry = [
@@ -90,7 +131,8 @@ document.addEventListener('DOMContentLoaded', () => {
               body: JSON.stringify({ 
                 keywords: cleanedKeywords,
                 query: query,
-                label: label
+                label: label,
+                target: 'prec'
               })  // query는 제거
             })
               .then(res => res.json())
