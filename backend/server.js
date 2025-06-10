@@ -56,7 +56,7 @@ app.post('/sendMessage', async (req, res) => {
     - 핵심 키워드 1개를 추출하여 'keywords'에 포함 (문장이 아닌 단어, 쉼표 없이)
     {
       "status": "complete",
-      "answer": "자세한 법률 조언 ... 마지막 줄: 이와 유사한 상황의 판례입니다.",
+      "answer": "자세한 법률 조언 ... 마지막 줄: 해당 질문과 유사한 판례를 오른쪽에 정리해두었습니다.",
       "keywords": "한글키워드1"
     }
 
@@ -169,7 +169,7 @@ app.post('/getLawCases', async (req, res) => {
       const fileContent = fs.readFileSync(filePath, 'utf-8');
       const json = JSON.parse(fileContent);
 
-      const match = [
+      const match = [   //jdgmn의 jdgmnInfo Summary keyword_tagg
         json.jdgmn,
         ...(json.jdgmnInfo?.map(q => q.question) || []),
         ...(json.Summary?.flatMap(s => [s.summ_contxt, s.summ_pass]) || []),
@@ -179,8 +179,14 @@ app.post('/getLawCases', async (req, res) => {
       if (match) {
         results.push({
           사건명: json.jdgmnInfo?.[0]?.question || json.jdgmn || '제목 없음',
+          사건번호: json.info?.caseNoID || '',
+          법정사건명: json.info?.caseNm || '',
           판결유형: json.info?.courtType || '알 수 없음',
           선고일자: json.info?.judmnAdjuDe || '날짜 없음',
+          요약: json.Summary?.[0]?.summ_pass || '',
+          참조조문: json.Reference_info?.reference_rules || '',
+          사건분류: json.Class_info?.class_name || '',
+          판시유형: json.Class_info?.instance_name || '',
           전체내용: json
         });
       }
