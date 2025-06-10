@@ -26,6 +26,10 @@ body.dark .case-card {
   color: #111;
 }
 
+body.dark .modal-content {
+  color: #111;
+}
+
 .container {
   display: flex;
   height: 100vh;
@@ -246,6 +250,23 @@ body.dark .right-panel {
   border-radius: 12px;
   font-size: 14px;
   white-space: pre-wrap;
+}
+
+.modal-close-btn {
+  float: right;
+  margin-bottom: 12px;
+  background: #f44336;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.modal-content {
+  white-space: pre-wrap;
+  line-height: 1.6;
 }
 
 /* 데스크탑 전용: 메뉴 확장 시 채팅 영역 밀기 */

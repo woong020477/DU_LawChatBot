@@ -91,7 +91,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
                   const detailButton = document.createElement('button');
                   detailButton.textContent = '자세히 보기';
-                  detailButton.onclick = () => showModal(item.전체내용); // 모달로 전체 JSON 표시
+                  detailButton.onclick = () => showModal(item); // 모달로 전체 JSON 표시
 
                   card.innerHTML = `
                     <strong>${item.사건명}</strong><br>
@@ -146,11 +146,107 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const modalBox = document.createElement('div');
     modalBox.className = 'modal-box';
-    modalBox.innerText = JSON.stringify(data, null, 2);
+
+    const closeBtn = document.createElement('button');
+    closeBtn.className = 'modal-close-btn';
+    closeBtn.innerText = '닫기';
+    closeBtn.onclick = () => document.body.removeChild(modalOverlay);
+
+    const content = document.createElement('div');
+    content.className = 'modal-content';
+
+    // 판례 항목 기반일 경우 (item.사건명 등 존재)
+    if (data.사건명) {
+      content.innerHTML = `
+        <strong>사건명: ${data.사건명}</strong><br>
+        사건번호: ${data.사건번호 || '없음'}<br>
+        법정사건명: ${data.법정사건명 || '없음'}<br>
+        판결유형: ${data.판결유형 || '없음'}<br>
+        선고일자: ${data.선고일자 || '없음'}<br>
+        사건분류: ${data.사건분류 || '없음'}<br>
+        판시유형: ${data.판시유형 || '없음'}<br>
+        요약: ${data.요약 || '없음'}<br>
+        참조조문: ${data.참조조문 || '없음'}<br>
+      `;
+    }
+
+    // Help 또는 Documentation용 구조일 경우
+    if (data.제목 || data.내용 || data.이미지들) {
+      if (data.제목) {
+        const title = document.createElement('h2');
+        title.innerText = data.제목;
+        content.appendChild(title);
+      }
+
+      if (data.내용) {
+        const desc = document.createElement('pre');
+        desc.innerText = data.내용.trim();
+        content.appendChild(desc);
+      }
+
+      if (Array.isArray(data.이미지들)) {
+        data.이미지들.forEach(img => {
+          const wrapper = document.createElement('div');
+          wrapper.style.marginTop = '12px';
+
+          const label = document.createElement('div');
+          label.innerText = img.label;
+          label.style.fontWeight = 'bold';
+          label.style.marginBottom = '4px';
+
+          const image = document.createElement('img');
+          image.src = img.src;
+          image.alt = img.label;
+          image.style.maxWidth = '100%';
+
+          wrapper.appendChild(label);
+          wrapper.appendChild(image);
+          content.appendChild(wrapper);
+        });
+      }
+    }
+
+    modalBox.appendChild(closeBtn);
+    modalBox.appendChild(content);
 
     modalOverlay.onclick = () => document.body.removeChild(modalOverlay);
+    modalBox.onclick = e => e.stopPropagation();
+
     modalOverlay.appendChild(modalBox);
     document.body.appendChild(modalOverlay);
+  }
+
+  function showHelpModal() {
+    showModal({
+      제목: '이용 안내 (Help)',
+      내용: `
+  하단의 채팅을 통해 챗봇과 법률적 상담이 가능합니다.
+  법률과 상관없는 질문 시 재응답을 요청하는 답변이 반환되며,
+  질문의 완성도에 따라 추가 정보를 요청할 수 있습니다.
+
+  우측의 유사한 판례는 질문에서 핵심 키워드를 추출하여 자동으로 검색됩니다.
+  '자세히 보기' 버튼을 클릭하면 판례 전문을 확인하실 수 있습니다.
+
+  라이트/다크 모드는 [설정] 메뉴에서 전환하실 수 있습니다.
+      `,
+      이미지들: [
+        { src: 'info_img1.png', label: 'Setting' },
+        { src: 'info_img_light.png', label: '라이트모드' },
+        { src: 'info_img_dark.png', label: '다크모드' }
+      ]
+    });
+  }
+
+  function showDocModal() {
+    showModal({
+      제목: '문서 (Documentation)',
+      내용: `
+  법률적인 상황에 대해 채팅을 통해 가이드라인을 제시하고,
+  질문에 기반한 핵심 키워드를 추출하여 관련 판례를 제공합니다.
+
+  문의: woong020477@gmail.com
+      `
+    });
   }
 
   // 전송 버튼 클릭 or Enter 키 클릭 시 메시지 전송
@@ -186,4 +282,6 @@ document.addEventListener('DOMContentLoaded', () => {
   window.openSettings = openSettings;
   window.closeSettings = closeSettings;
   window.setMode = setMode;
+  window.showDocModal = showDocModal;
+  window.showHelpModal = showHelpModal;
 });
