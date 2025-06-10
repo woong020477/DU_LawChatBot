@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         선고일자: ${data.선고일자 || '없음'}<br>
         사건분류: ${data.사건분류 || '없음'}<br>
         판시유형: ${data.판시유형 || '없음'}<br>
-        요약: ${data.요약 || '없음'}<br>
+        <strong>요약: ${data.요약 || '없음'}</strong><br>
         참조조문: ${data.참조조문 || '없음'}<br>
       `;
     }
