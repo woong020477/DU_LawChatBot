@@ -238,15 +238,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   function showDocModal() {
-    showModal({
-      제목: '문서 (Documentation)',
-      내용: `
-  법률적인 상황에 대해 채팅을 통해 가이드라인을 제시하고,
-  질문에 기반한 핵심 키워드를 추출하여 관련 판례를 제공합니다.
-
-  문의: woong020477@gmail.com
-      `
-    });
+    var link = 'https://github.com/woong020477/DU_LawChatBot/wiki'
+    window.open(link);
   }
 
   // 전송 버튼 클릭 or Enter 키 클릭 시 메시지 전송
