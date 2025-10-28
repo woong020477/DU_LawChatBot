@@ -4,12 +4,7 @@
 <img src="README_info1.png" alt="web image1" />
 <img src="README_info2.png" alt="web image2" />
 법률적인 상황에 대한 채팅을 통해 가이드라인을 제시하고, 유사한 판례를 제공하는 웹 서비스입니다.<br>
-<img src="https://img.shields.io/badge/html5-E34F26?style=for-the-badge&logo=html5&logoColor=white">
-<img src="https://img.shields.io/badge/css-1572B6?style=for-the-badge&logo=css3&logoColor=white">
-<img src="https://img.shields.io/badge/javascript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"><br>
-<img src="https://img.shields.io/badge/node.js-339933?style=for-the-badge&logo=Node.js&logoColor=white">
-<img src="https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white"><br>
-
+<br><img src="https://firebasestorage.googleapis.com/v0/b/stackticon-81399.appspot.com/o/images%2F1761659513630?alt=media&token=d29678ad-3ec6-4138-8f59-a330a0ebf534">
 <h2>How To Use</h2>
 <h3>Client</h3>
 1. 서버 실행<br>
